@@ -24,17 +24,17 @@ class GetFromDictionaryDotComResultTest extends TestCase
 
     public function testGetWord(): void
     {
-        $this->assertSame('Name', $wotd->getWord());
+        $this->assertSame('Name', $this->wotd->getWord());
     }
 
     public function testGetUrl(): void
     {
-        $this->assertSame('http://www.dictionary.com/browse/Name', $wotd->getUrl());
+        $this->assertSame('http://www.dictionary.com/browse/Name', $this->wotd->getUrl());
     }
 
     public function testGetDefinition(): void
     {
-        $this->assertSame('Description', $wotd->getDefinition());
+        $this->assertSame('Description', $this->wotd->getDefinition());
     }
 
     public function testParseInvalidDOMStructure(): void

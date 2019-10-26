@@ -24,17 +24,17 @@ class GetFromMerriamWebsterResultTest extends TestCase
 
     public function testGetWord(): void
     {
-        $this->assertSame('Name', $wotd->getWord());
+        $this->assertSame('Name', $this->wotd->getWord());
     }
 
     public function testGetUrl(): void
     {
-        $this->assertSame('http://www.dictionary.com/browse/Name', $wotd->getUrl());
+        $this->assertSame('http://www.dictionary.com/browse/Name', $this->wotd->getUrl());
     }
 
     public function testGetDefinition(): void
     {
-        $this->assertSame('Description', $wotd->getDefinition());
+        $this->assertSame('Description', $this->wotd->getDefinition());
     }
 
     public function testParseInvalidDOMStructure(): void
@@ -42,7 +42,7 @@ class GetFromMerriamWebsterResultTest extends TestCase
         $this->expectException(InvalidDOMStructure::class);
         $this->expectExceptionMessage('Unexpected html structure');
         $dom = domdocument_load_html('');
-        $wotd = $this->getFromMerriamWebsterResult->parse($dom);
+        $this->getFromMerriamWebsterResult->parse($dom);
     }
 
     public function testParseWotdNotFound(): void
@@ -50,6 +50,6 @@ class GetFromMerriamWebsterResultTest extends TestCase
         $this->expectException(WotdNotFound::class);
         $this->expectExceptionMessage('WOTD not found');
         $dom = domdocument_load_html('<div class=" word-header "><h1></h1><div class=" wod-definition-container "><p><strong></strong>Description</p></div></div>');
-        $wotd = $this->getFromMerriamWebsterResult->parse($dom);
+        $this->getFromMerriamWebsterResult->parse($dom);
     }
 }
