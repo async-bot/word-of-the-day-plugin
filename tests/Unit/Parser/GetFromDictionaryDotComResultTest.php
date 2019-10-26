@@ -12,19 +12,28 @@ class GetFromDictionaryDotComResultTest extends TestCase
 {
     private GetFromDictionaryDotComResult $getFromDictionaryDotComResult;
 
+    private Wotd $wotd;
+
     protected function setUp(): void
     {
         $this->getFromDictionaryDotComResult = new GetFromDictionaryDotComResult();
-    }
-
-    public function testParse(): void
-    {
         $dom = new \DOMDocument();
         $dom->loadHTML('<div class=" wotd-item__definition "><h1>Name</h1><div class=" wotd-item__definition__text ">Description</div></div>');
-        $wotd = $this->getFromDictionaryDotComResult->parse($dom);
-        $this->assertInstanceOf(Wotd::class, $wotd);
+        $this->wotd = $this->getFromDictionaryDotComResult->parse($dom);
+    }
+
+    public function testGetWord(): void
+    {
         $this->assertSame('Name', $wotd->getWord());
+    }
+
+    public function testGetUrl(): void
+    {
         $this->assertSame('http://www.dictionary.com/browse/Name', $wotd->getUrl());
+    }
+
+    public function testGetDefinition(): void
+    {
         $this->assertSame('Description', $wotd->getDefinition());
     }
 

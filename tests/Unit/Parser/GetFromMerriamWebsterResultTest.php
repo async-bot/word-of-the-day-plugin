@@ -12,19 +12,28 @@ class GetFromMerriamWebsterResultTest extends TestCase
 {
     private GetFromMerriamWebsterResult $getFromMerriamWebsterResult;
 
+    private Wotd $wotd;
+
     protected function setUp(): void
     {
         $this->getFromMerriamWebsterResult = new GetFromMerriamWebsterResult();
-    }
-
-    public function testParse(): void
-    {
         $dom = new \DOMDocument();
         $dom->loadHTML('<div class=" word-header "><h1>Name</h1><div class=" wod-definition-container "><p><strong></strong>Description</p></div></div>');
-        $wotd = $this->getFromMerriamWebsterResult->parse($dom);
-        $this->assertInstanceOf(Wotd::class, $wotd);
+        $this->wotd = $this->getFromMerriamWebsterResult->parse($dom);
+    }
+
+    public function testGetWord(): void
+    {
         $this->assertSame('Name', $wotd->getWord());
-        $this->assertSame('https://www.merriam-webster.com/dictionary/Name', $wotd->getUrl());
+    }
+
+    public function testGetUrl(): void
+    {
+        $this->assertSame('http://www.dictionary.com/browse/Name', $wotd->getUrl());
+    }
+
+    public function testGetDefinition(): void
+    {
         $this->assertSame('Description', $wotd->getDefinition());
     }
 
