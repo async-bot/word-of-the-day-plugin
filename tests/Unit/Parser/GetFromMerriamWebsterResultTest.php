@@ -29,7 +29,7 @@ class GetFromMerriamWebsterResultTest extends TestCase
 
     public function testGetUrl(): void
     {
-        $this->assertSame('http://www.dictionary.com/browse/Name', $this->wotd->getUrl());
+        $this->assertSame('https://www.merriam-webster.com/dictionary/Name', $this->wotd->getUrl());
     }
 
     public function testGetDefinition(): void
