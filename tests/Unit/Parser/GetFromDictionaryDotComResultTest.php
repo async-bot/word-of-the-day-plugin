@@ -7,6 +7,7 @@ use AsyncBot\Plugin\WordOfTheDay\Exception\WotdNotFound;
 use AsyncBot\Plugin\WordOfTheDay\Parser\GetFromDictionaryDotComResult;
 use AsyncBot\Plugin\WordOfTheDay\ValueObject\Result\Wotd;
 use PHPUnit\Framework\TestCase;
+use function Room11\DOMUtils\domdocument_load_html;
 
 class GetFromDictionaryDotComResultTest extends TestCase
 {
@@ -17,8 +18,7 @@ class GetFromDictionaryDotComResultTest extends TestCase
     protected function setUp(): void
     {
         $this->getFromDictionaryDotComResult = new GetFromDictionaryDotComResult();
-        $dom = new \DOMDocument();
-        $dom->loadHTML('<div class=" wotd-item__definition "><h1>Name</h1><div class=" wotd-item__definition__text ">Description</div></div>');
+        $dom = domdocument_load_html('<div class=" wotd-item__definition "><h1>Name</h1><div class=" wotd-item__definition__text ">Description</div></div>');
         $this->wotd = $this->getFromDictionaryDotComResult->parse($dom);
     }
 
@@ -41,7 +41,7 @@ class GetFromDictionaryDotComResultTest extends TestCase
     {
         $this->expectException(InvalidDOMStructure::class);
         $this->expectExceptionMessage('Unexpected html structure');
-        $dom  = new \DOMDocument();
+        $dom = domdocument_load_html('');
         $wotd = $this->getFromDictionaryDotComResult->parse($dom);
     }
 
@@ -49,8 +49,7 @@ class GetFromDictionaryDotComResultTest extends TestCase
     {
         $this->expectException(WotdNotFound::class);
         $this->expectExceptionMessage('WOTD not found');
-        $dom = new \DOMDocument();
-        $dom->loadHTML('<div class=" wotd-item__definition "><h1></h1><div class=" wotd-item__definition__text ">Description</div></div>');
+        $dom = domdocument_load_html('<div class=" wotd-item__definition "><h1></h1><div class=" wotd-item__definition__text ">Description</div></div>');
         $wotd = $this->getFromDictionaryDotComResult->parse($dom);
     }
 }
