@@ -2,12 +2,12 @@
 
 namespace AsyncBot\Plugin\WordOfTheDay\Retriever;
 
-use Amp\Http\Client\Response;
 use Amp\Promise;
 use AsyncBot\Core\Http\Client;
-use AsyncBot\Plugin\WordOfTheDay\Exception\WotdNotFound;
-use AsyncBot\Plugin\WordOfTheDay\Parser\GetFromMerriamWebsterResult;
-use AsyncBot\Plugin\WordOfTheDay\ValueObject\Result\Wotd;
+use AsyncBot\Plugin\WordOfTheDay\Exception\UnexpectedHtmlFormat;
+use AsyncBot\Plugin\WordOfTheDay\Exception\WordOfTheDayNotFound;
+use AsyncBot\Plugin\WordOfTheDay\Parser\ParseMerriamWebsterResult;
+use AsyncBot\Plugin\WordOfTheDay\ValueObject\Result\WordOfTheDay;
 use function Amp\call;
 
 final class GetFromMerriamWebster
@@ -20,15 +20,19 @@ final class GetFromMerriamWebster
     }
 
     /**
-     * @return Promise<Wotd>
-     * @throws WotdNotFound
+     * @return Promise<WordOfTheDay>
+     * @throws WordOfTheDayNotFound
      */
     public function retrieve(): Promise
     {
         return call(function () {
-            return (new GetFromMerriamWebsterResult())->parse(
-            /** @var Response $response */
-                yield $this->httpClient->requestHtml('https://www.merriam-webster.com/word-of-the-day'));
+            try {
+                return (new ParseMerriamWebsterResult())->parse(
+                    yield $this->httpClient->requestHtml('https://www.merriam-webster.com/word-of-the-day'),
+                );
+            } catch (UnexpectedHtmlFormat $e) {
+                throw new WordOfTheDayNotFound();
+            }
         });
     }
 }

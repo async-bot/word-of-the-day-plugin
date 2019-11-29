@@ -2,9 +2,8 @@
 
 namespace AsyncBot\Plugin\WordOfTheDay\ValueObject\Result;
 
-class Wotd
+class WordOfTheDay
 {
-
     private string $word;
 
     private string $url;

@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# video: http://ogp.me/ns/video# ya: http://webmaster.yandex.ru/vocabularies/">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"393deec9cb",applicationID:"330714021"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <link rel="pingback" href="https://www.dictionary.com/e/xmlrpc.php" />
+
+    <title>Word of the Day - foison | Dictionary.com</title>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        window.crbAdLocations = {"test":false,"atw":false,"atw-landing":false,"atw-category":false,"slideshow":false,"article":false,"category":false,"homepage":false,"video":false,"crossword":false,"word-finder":false,"word-finder-scrabble":false,"word-finder-list":false,"crossword-solver":false,"wotd":true,"serp":true};
+    </script>
+
+    <!-- This site is optimized with the Yoast SEO Premium plugin v7.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description" content="Find new words to share every day with Dictionary.com&#039;s Word of the Day. Discover the definition, pronunciation, and origin of uncommon words plus more!"/>
+    <link rel="canonical" href="https://www.dictionary.com/e/word-of-the-day/" />
+    <link rel="next" href="https://www.dictionary.com/e/word-of-the-day/page/2/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="object" />
+    <meta property="og:title" content="Word of the Day - foison | Dictionary.com" />
+    <meta property="og:url" content="https://www.dictionary.com/e/word-of-the-day/" />
+    <meta property="og:site_name" content="Everything After Z by Dictionary.com" />
+    <meta property="fb:app_id" content="267160383314960" />
+    <meta property="og:image" content="https://www.dictionary.com/e/wp-content/uploads/2019/11/20191128_foison.jpg" />
+    <meta property="og:image:secure_url" content="https://www.dictionary.com/e/wp-content/uploads/2019/11/20191128_foison.jpg" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="700" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Find new words to share every day with Dictionary.com&#039;s Word of the Day. Discover the definition, pronunciation, and origin of uncommon words plus more!" />
+    <meta name="twitter:title" content="Word of the Day - foison | Dictionary.com" />
+    <meta name="twitter:site" content="@dictionarycom" />
+    <meta name="twitter:image" content="https://www.dictionary.com/e/wp-content/uploads/2019/11/20191128_foison.jpg" />
+    <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/www.dictionary.com\/e\/","sameAs":["https:\/\/www.facebook.com\/dictionarycom","https:\/\/www.instagram.com\/dictionarycom\/","https:\/\/www.pinterest.com\/dictionarycom\/","https:\/\/twitter.com\/dictionarycom"],"@id":"https:\/\/www.dictionary.com\/e\/#organization","name":"Dictionary.com","logo":"https:\/\/www.dictionary.com\/e\/wp-content\/uploads\/2017\/07\/default_logo_800x800.jpg"}</script>
+    <!-- / Yoast SEO Premium plugin. -->
+
+    <link rel='dns-prefetch' href='//cdn.polyfill.io' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="Everything After Z by Dictionary.com &raquo; Feed" href="https://www.dictionary.com/e/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Everything After Z by Dictionary.com &raquo; Comments Feed" href="https://www.dictionary.com/e/comments/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Everything After Z by Dictionary.com &raquo; WOTDs Feed" href="https://www.dictionary.com/e/word-of-the-day/?feed=rss2" />
+    <link rel="shortcut icon" href="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/favicon.ico?ver=1574716139" />
+    <script type="text/javascript">
+        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.dictionary.com\/e\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+        !function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css'  href='https://www.dictionary.com/e/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-parsely-style-css'  href='https://www.dictionary.com/e/wp-content/plugins/wp-parsely/wp-parsely.css?ver=1574716222' type='text/css' media='all' />
+    <link rel='stylesheet' id='theme-mCustomScrollbar-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/jquery.mCustomScrollbar.min.css?ver=1574716139' type='text/css' media='all' />
+    <link rel='stylesheet' id='theme-font-awesome-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/font-awesome.min.css?ver=1574716139' type='text/css' media='all' />
+    <link rel='stylesheet' id='theme-slick-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/slick.css?ver=1574716139' type='text/css' media='all' />
+    <link rel='stylesheet' id='theme-styles-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/style.css?ver=1574716139' type='text/css' media='all' />
+    <link rel='stylesheet' id='theme-main-styles-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/bundle-main.css?ver=1574716235' type='text/css' media='all' />
+    <link rel='stylesheet' id='theme-wotd-styles-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/bundle-wotd.css?ver=1574716235' type='text/css' media='all' />
+    <link rel='stylesheet' id='theme-marketing-message-styles-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/bundle-marketing-message.css?ver=1574716235' type='text/css' media='all' />
+    <script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+    <script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/js/vendor/jquery.mCustomScrollbar.concat.min.js?ver=1574716139'></script>
+    <script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/js/vendor/slick.js?ver=1574716139'></script>
+    <script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/bundle.js?ver=1574716232'></script>
+    <script type='text/javascript' src='https://cdn.polyfill.io/v2/polyfill.min.js?ver=5.2.4'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var crb_tracking_arguments = {"tracking_enabled":"1","tracking_qr":"","tracking_ev":"p","tracking_pn":"blog-wotd-post","tracking_ct":"today"};
+        var crb_theme_settings = {"homeurl":"https:\/\/www.dictionary.com\/e\/","editorialSearchUrl":"https:\/\/www.dictionary.com\/e\/?s={{query}}&post_type[]=post&post_type[]=page&post_type[]=attachment&post_type[]=crb_press&post_type[]=crb_videos&post_type[]=crb_slideshow&post_type[]=crb_wotd","dictionarySearchUrl":"https:\/\/www.dictionary.com\/browse\/{{query}}?s=t","thesaurusSearchUrl":"https:\/\/www.thesaurus.com\/browse\/{{query}}?s=t","ajaxurl":"https:\/\/www.dictionary.com\/e\/crb-ajax\/cached.php","cachebuster":"1574957442","click_token":"","ad_wrapper_url":"\/\/ads.pubmatic.com\/AdServer\/js\/pwt\/103207\/746","0":"scra"};
+        var crb_parsely_settings = {"api_url":"https:\/\/api.parsely.com\/v2\/","profile_endpoint":"profile","related_endpoint":"related","api_key":"dictionary.com","boost":"","tag":"","history_key":"crb_posts_history","date":"2019-11-27T21:00","post_classes":["single-crb_slideshow","single-post"],"post_type":"crb_wotd"};
+        var crb_wotd_settings = {"postsPerPage":"7","maxCachedPages":"10","nonce":"dea0f90119","dcomLink":"https:\/\/www.dictionary.com\/browse\/{{word}}","wotdLandingLink":"https:\/\/www.dictionary.com\/e\/word-of-the-day","lazyAdSlot":"crb-ad-slot-bottom"};
+        var crb_word_finder_settings = {"widgets":[],"letter":"","nonce":"7b79a166b6","ajaxUrl":"https:\/\/www.dictionary.com\/e\/crb-ajax\/cached.php","pageType":"1","ajaxAction":"get_wf_widget_page"};
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/js/build/bundle-theme.js?ver=1574716254'></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.dictionary.com/e/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.dictionary.com/e/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.2.4" />
+
+    <!-- BEGIN wp-parsely Plugin Version 2.0 -->
+    <meta name="wp-parsely_version" id="wp-parsely_version" content="2.0"/>
+    <script type="application/ld+json">
+        {"@context":"http:\/\/schema.org","@type":"WebPage","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.dictionary.com\/e\/word-of-the-day\/foison-2019-11-28\/"},"headline":"Archives: WOTDs","url":"https:\/\/www.dictionary.com\/e\/e\/word-of-the-day\/","thumbnailUrl":"https:\/\/www.dictionary.com\/e\/wp-content\/uploads\/2019\/11\/20191128_foison-150x150.jpg","image":{"@type":"ImageObject","url":"https:\/\/www.dictionary.com\/e\/wp-content\/uploads\/2019\/11\/20191128_foison-150x150.jpg"},"dateCreated":"2019-11-28T05:00:32Z","datePublished":"2019-11-28T05:00:32Z","dateModified":"2019-11-28T05:00:32Z","articleSection":"Uncategorized","author":[{"@type":"Person","name":"Dictionary.com"}],"creator":["Renae Hurlbutt"],"keywords":[""],"publisher":{"@type":"Organization","name":"Everything After Z by Dictionary.com","logo":{"@type":"ImageObject","url":""}},"custom_metadata":"{\"image_url_590x380\":\"https:\\\/\\\/www.dictionary.com\\\/e\\\/wp-content\\\/uploads\\\/2019\\\/11\\\/20191128_foison-590x380.jpg\",\"image_url_500x500\":\"https:\\\/\\\/www.dictionary.com\\\/e\\\/wp-content\\\/uploads\\\/2019\\\/11\\\/20191128_foison-500x500.jpg\",\"image_url_382x247\":\"https:\\\/\\\/www.dictionary.com\\\/e\\\/wp-content\\\/uploads\\\/2019\\\/11\\\/20191128_foison-382x247.jpg\",\"image_url_150x150\":\"https:\\\/\\\/www.dictionary.com\\\/e\\\/wp-content\\\/uploads\\\/2019\\\/11\\\/20191128_foison-150x150.jpg\"}"}
+    </script>
+
+    <meta name="parsely-metadata" content="{&quot;image_url_590x380&quot;:&quot;https:\/\/www.dictionary.com\/e\/wp-content\/uploads\/2019\/11\/20191128_foison-590x380.jpg&quot;,&quot;image_url_500x500&quot;:&quot;https:\/\/www.dictionary.com\/e\/wp-content\/uploads\/2019\/11\/20191128_foison-500x500.jpg&quot;,&quot;image_url_382x247&quot;:&quot;https:\/\/www.dictionary.com\/e\/wp-content\/uploads\/2019\/11\/20191128_foison-382x247.jpg&quot;,&quot;image_url_150x150&quot;:&quot;https:\/\/www.dictionary.com\/e\/wp-content\/uploads\/2019\/11\/20191128_foison-150x150.jpg&quot;}"/>
+    <!-- END wp-parsely Plugin Version 2.0 -->
+    <style>
+        .no-js img.lazyload { display: none; }
+        figure.wp-block-image img.lazyloading { min-width: 150px; }
+        .lazyload { opacity: 0; }
+        .lazyloading {
+            border: 0 !important;
+            opacity: 1;
+            background: rgba(255, 255, 255, 0) url('https://www.dictionary.com/e/wp-content/plugins/wp-smush-pro/app/assets/images/smush-lazyloader-1.gif') no-repeat center !important;
+            background-size: 16px auto !important;
+        }
+    </style>
+    <script src="https://ak.sail-horizon.com/spm/spm.v1.min.js"></script><script src="https://www.dictionary.com/e/wp-content/plugins/gravityforms/js/gravityforms.min.js"></script>  <link rel="preconnect" href="https://ak.sail-horizon.com">
+    <link rel="preconnect" href="https://track.dictionary.com">
+    <link rel="preconnect" href="https://api.parsely.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.googletagservices.com">
+    <link rel="preconnect" href="https://ads.pubmatic.com">
+    <link rel="preconnect" href="https://c.amazon-adsystem.com">
+
+    <script src="https://ak.sail-horizon.com/spm/spm.v1.min.js"></script>
+    <script>Sailthru.init({ customerId: '79cddfbc50ef558a5e8bef02e1ffa767' });</script>
+
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WZVH87');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="google-site-verification" content="CW6ZjP5DwCOJ8EiGWZuA54-ScKUf9H8kWiXsiX3Nadg"/>
+
+    <meta property="article:tag" content="eaz-atw"/>
+    <script>
+        function loadjscssfile(filename, filetype){
+            if (filetype=="js"){ //if filename is a external JavaScript file
+                var fileref=document.createElement('script');
+                fileref.setAttribute("type","text/javascript");
+                fileref.setAttribute("src", filename);
+            }
+            else if (filetype=="css"){ //if filename is an external CSS file
+                var fileref=document.createElement("link");
+                fileref.setAttribute("rel", "stylesheet");
+                fileref.setAttribute("type", "text/css");
+                fileref.setAttribute("href", filename);
+            }
+            if (typeof fileref!="undefined") {
+                document.getElementsByTagName("head")[0].appendChild(fileref);
+            }
+        }
+
+        var PWT={}; //Initialize Namespace
+        PWT.jsLoaded = function() { //PubMatic pwt.js on load callback is used to load GPT
+            var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+            (function() {
+                var useSSL = 'https:' == document.location.protocol;
+                var gptsrc = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+                loadjscssfile(gptsrc,'js');
+            })();
+
+            window.OWT.registerExternalBidders();
+        }
+    </script>
+    <script>
+        (function() {
+            var purl = window.location.href;
+            var url = window.crb_theme_settings.ad_wrapper_url;
+            var profileVersionId = '';
+
+            if(purl.indexOf('pwtv=')>0) {
+                var regexp = /pwtv=(.*?)(&|$)/g;
+                var matches = regexp.exec(purl);
+                if(matches.length >= 2 && matches[1].length > 0) {
+                    profileVersionId = '/'+matches[1];
+                }
+            }
+            var pwtsrc = url+profileVersionId+'/pwt.js'; loadjscssfile(pwtsrc,'js');
+
+        })();
+
+    </script>
+</head>
+<body class="archive post-type-archive post-type-archive-crb_wotd" data-slug="word-of-the-day-foison-dictionary-com">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZVH87" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script>
+    var updateRefAndFire = function(url, urlref) {
+        var dictionary_com_re = new RegExp("https*://www.dictionary.com/(?!e\/)");
+        var is_from_main_site = dictionary_com_re.test(urlref);
+        var urlref = is_from_main_site ? "http://dictionary_core.com" : urlref;
+
+        PARSELY.beacon.trackPageView({
+            url: url,
+            urlref: urlref,
+            js: 1
+        });
+        return true;
+    }
+
+    PARSELY = {
+        autotrack: false,
+        onload: function() {
+            updateRefAndFire(location.href,document.referrer);
+            jQuery("button.slick-next").bind("click", function() {
+                var $slider = jQuery('.article .slides.slick-slides');
+                var id = $slider.find('.slide.slick-active').data('id');
+                var url = location.protocol+'//'+location.host+location.pathname+'#'+id+(location.search?location.search:"")
+
+                updateRefAndFire(url, location.href);
+            });
+        }
+    };
+</script><div class="wrapper">
+
+    <div class="header">
+        <nav class="nav-utilities">
+            <a href="#" class="toggle">
+                <span></span>
+                Menu			</a>
+
+            <ul id="menu-top-menu" class="menu"><li id="menu-item-21023" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21023"><a href="https://www.dictionary.com/" data-linkid="tqks0v">Dictionary.com</a></li>
+                <li id="menu-item-21024" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21024"><a href="https://www.thesaurus.com/" data-linkid="qxnxzj">Thesaurus.com</a></li>
+                <li id="menu-item-21851" class="current-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-21851"><a href="https://www.dictionary.com/e/" data-linkid="9v7tke">Everything After Z</a></li>
+                <li id="menu-item-120374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120374"><a href="https://www.dictionary.com/e/all-the-words/" data-linkid="f0ftiz">All The Words</a></li>
+            </ul>		</nav><!-- /.nav-utilities -->
+
+        <div class="nav-panel"><ul id="menu-main-menu" class="menu"><li id="menu-item-21831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21831"><a href="https://www.dictionary.com/" data-linkid="lxabec">Dictionary.com</a></li>
+            <li id="menu-item-21835" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21835"><a href="https://www.thesaurus.com/" data-linkid="c1drjk">Thesaurus.com</a></li>
+            <li id="menu-item-21836" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-21836"><a href="https://www.dictionary.com/e/" data-linkid="t6ehki">Everything After Z</a>
+                <ul class="sub-menu">
+                    <li id="menu-item-21832" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-21832"><a href="https://www.dictionary.com/e/word-of-the-day/" aria-current="page" data-linkid="1498ik">Word of the Day</a></li>
+                    <li id="menu-item-126387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126387"><a href="https://www.dictionary.com/e/video/" data-linkid="t6ehki">Video</a></li>
+                    <li id="menu-item-126389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-126389"><a href="https://www.dictionary.com/e/c/word-facts/" data-linkid="t6ehki">Word Facts</a></li>
+                    <li id="menu-item-126388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126388"><a href="https://www.dictionary.com/e/grammar/" data-linkid="t6ehki">Grammar</a></li>
+                    <li id="menu-item-136070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136070"><a href="https://www.dictionary.com/e/word-finder/">Scrabble Word Finder</a></li>
+                    <li id="menu-item-126384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126384"><a href="https://www.dictionary.com/e/crosswordsolver/" data-linkid="636f6c">Crossword Solver</a></li>
+                    <li id="menu-item-126385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126385"><a href="https://www.dictionary.com/e/crossword/" data-linkid="636f6c">Daily Crossword Puzzle</a></li>
+                </ul>
+            </li>
+            <li id="menu-item-110179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110179"><a href="https://www.dictionary.com/e/all-the-words/" data-linkid="qnez9u">All The Words</a>
+                <ul class="sub-menu">
+                    <li id="menu-item-112728" class="menu-item menu-item-type-taxonomy menu-item-object-crb_word_category menu-item-112728"><a href="https://www.dictionary.com/e/slang/" data-linkid="qnez9u">Slang</a></li>
+                    <li id="menu-item-112729" class="menu-item menu-item-type-taxonomy menu-item-object-crb_word_category menu-item-112729"><a href="https://www.dictionary.com/e/emoji/" data-linkid="bhng9k">Emoji</a></li>
+                    <li id="menu-item-112730" class="menu-item menu-item-type-taxonomy menu-item-object-crb_word_category menu-item-112730"><a href="https://www.dictionary.com/e/gender-sexuality/" data-linkid="1l40im">Gender &#038; Sexuality</a></li>
+                    <li id="menu-item-112731" class="menu-item menu-item-type-taxonomy menu-item-object-crb_word_category menu-item-112731"><a href="https://www.dictionary.com/e/acronyms/" data-linkid="8quzrn">Acronyms</a></li>
+                </ul>
+            </li>
+        </ul></div>
+        <div class="shell">
+            <a href="https://www.dictionary.com/e/" class="logo notext" data-linkid="7oacbk">Everything After Z by Dictionary.com</a>
+        </div><!-- /.shell -->
+
+        <nav class="nav">
+            <div class="shell">
+                <ul id="menu-header-menu" class="menu"><li id="menu-item-136071" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-136071"><a href="#" data-cts="{&quot;linkId&quot;:&quot;&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:1}">Word Finder</a>
+                    <ul class="sub-menu">
+                        <li id="menu-item-124826" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124826"><a href="https://www.dictionary.com/e/crosswordsolver/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:2}">Crossword Solver</a></li>
+                        <li id="menu-item-136073" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136073"><a href="https://www.dictionary.com/e/word-finder/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:3}">Scrabble Word Finder</a></li>
+                        <li id="menu-item-136072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136072"><a href="https://www.dictionary.com/e/words-with-friends-cheat/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:4}">Words With Friends Cheat</a></li>
+                        <li id="menu-item-124827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124827"><a href="https://www.dictionary.com/e/crossword/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:5}">Daily Crossword Puzzle</a></li>
+                    </ul>
+                </li>
+                    <li id="menu-item-138148" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-138148"><a href="https://www.dictionary.com/e/c/video/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:6}">Video</a></li>
+                    <li id="menu-item-111453" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-111453"><a href="https://www.dictionary.com/e/c/word-trends/slang/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:7}">Slang</a></li>
+                    <li id="menu-item-21059" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21059"><a href="https://www.dictionary.com/e/c/fun/quizzes/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:8}">Quizzes</a></li>
+                    <li id="menu-item-21065" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21065"><a href="https://www.dictionary.com/e/c/fun/quotes/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:9}">Quotes</a></li>
+                    <li id="menu-item-21061" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21061"><a href="https://www.dictionary.com/e/c/word-facts/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:10}">Word Facts</a></li>
+                    <li id="menu-item-21071" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21071"><a href="https://www.dictionary.com/e/c/word-trends/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:11}">Trends</a></li>
+                    <li id="menu-item-21033" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21033"><a href="#" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:12}">more</a>
+                        <ul class="sub-menu">
+                            <li id="menu-item-117208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117208"><a href="https://www.dictionary.com/e/grammar/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:13}">Grammar</a></li>
+                            <li id="menu-item-21067" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21067"><a href="https://www.dictionary.com/e/c/hobbies/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:14}">Hobbies &#038; Passions</a></li>
+                            <li id="menu-item-21060" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21060"><a href="https://www.dictionary.com/e/c/hobbies/history/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:15}">History</a></li>
+                            <li id="menu-item-21058" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21058"><a href="https://www.dictionary.com/e/c/current-events/in-the-news/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:16}">In the News</a></li>
+                            <li id="menu-item-21066" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21066"><a href="https://www.dictionary.com/e/c/arts-entertainment/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:17}">Literature &#038; Arts</a></li>
+                            <li id="menu-item-21064" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21064"><a href="https://www.dictionary.com/e/c/science/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:18}">Science &#038; Technology</a></li>
+                            <li id="menu-item-21063" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21063"><a href="https://www.dictionary.com/e/c/current-events/" data-cts="{&quot;linkId&quot;:&quot;89gi58&quot;,&quot;infix&quot;:&quot;&quot;,&quot;domain&quot;:&quot;dictionary.com&quot;,&quot;clkpage&quot;:&quot;dic&quot;,&quot;clkmod&quot;:&quot;eaznav&quot;,&quot;clksite&quot;:&quot;dict&quot;,&quot;clkld&quot;:0,&quot;ordinal&quot;:19}">Current Events</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form action="https://www.dictionary.com/e/" class="search-form header__search-form" method="get" role="search">
+                    <label>
+                        <span class="screen-reader-text">Search for:</span>
+
+                        <input type="text" title="Search for:" name="s" value="" id="s" placeholder="Search Editorial" class="search__field" />
+                    </label>
+
+                    <button type="submit" class="search__btn screen-reader-text" data-linkid="z332re">Search</button>
+                </form>
+            </div><!-- /.shell -->
+        </nav><!-- /.nav -->
+    </div><!-- /.header -->
+
+    <div class="shell--large">
+        <div class="wotd-ad-top"></div>
+
+        <div class="wotd-wrapper">
+            <div class="wotd-content">
+                <ul class="wotd-items">
+
+                    <li
+                            class="wotd-item"
+                            data-name="foison-2019-11-28"
+                            data-url="https://www.dictionary.com/e/word-of-the-day/"
+                            data-color="#A92828"
+                            data-title="foison"
+                            data-date="Nov 28"
+                            data-is-ad-enabled="false"
+                            data-is-latest-post="true"
+                            data-page-title="Word of the Day - foison | Dictionary.com"
+                    >
+
+                        <div class="wotd-item__label">Word <span>of the</span> day</div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                data-name="avocation-2019-11-21"
+                                class="wotd-item__next-page "
+                        >
+                            Previous Week    </a>
+
+
+                        <div class="wotd-item__date">
+                            Thursday, November 28, 2019  </div>
+
+                        <div class="wotd-item__definition" style="background-color: #A92828">
+                            <a
+                                    href="https://static.sfdict.com/audio/F02/F0255900.mp3"
+                                    class="wotd-item__definition__listen"
+                            ></a>
+
+                            <h1>foison</h1>
+
+                            <div class="wotd-item__definition__pronunciation">
+                                <span class="luna-pos">noun</span> [<span class="bold">foi</span>-z<span class="italic">uh</span>n] <span class="italic"> <span class="luna-labset"><span class="luna-label italic">Archaic</span></span>.</span>    </div>
+
+                            <div class="wotd-item__definition__text ">
+                                abundance; plenty.    </div>
+
+                                Look it up  </a>
+                        </div>
+
+                        <div class="wotd-item__socials">
+
+                            <div class="share trigger-share-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fword-of-the-day%2Ffoison-2019-11-28%2F" class="ico-facebook" target="_blank" data-linkid="begyaa"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/intent/tweet/?text=Today&#039;s%20%23WordOftheDay%20on%20@Dictionarycom%20is%20foison&#038;url=https://www.dictionary.com/e/word-of-the-day/foison-2019-11-28/" class="ico-twitter" target="_blank" data-linkid="agbu2i"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://pinterest.com/pin/create/button/?url=https://www.dictionary.com/e/word-of-the-day/foison-2019-11-28/&#038;media=https://www.dictionary.com/e/wp-content/uploads/2019/11/20191128_foison.jpg&#038;description=Word%20of%20the%20Day%20-%20foison%20%23DictionaryCom" class="ico-pinterest" target="_blank" data-linkid="r0ond7"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="mailto:?subject=Word%20of%20the%20Day%20-%20foison%20|%20Dictionary.com&#038;body=I%20discovered%20the%20Word%20of%20the%20Day%20from%20Dictionary.com%2C%20and%20I%20wanted%20to%20share%20it%20with%20you.%20https://www.dictionary.com/e/word-of-the-day/foison-2019-11-28/" class="ico-email" target="_blank" data-linkid="m52euo"></a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.share -->
+                        </div>
+
+                        <div class="wotd-item__bottom">
+
+                            <div class="wotd-item__form">
+                                <div class="inner">
+                                    <h3>Get to know dictionary.com</h3>
+
+
+                                    <div class='gf_browser_gecko gform_wrapper' id='gform_wrapper_1' ><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_1' id='gform_1'  action='/e/word-of-the-day/'>
+                                        <div class='gform_heading'>
+                                            <span class='gform_description'>SIGN UP FOR A VOCABULARY BOOST IN YOUR EMAIL</span>
+                                        </div>
+                                        <div class='gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'><li id='field_1_1'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible gfield--email gfield--medium' ><label class='gfield_label' for='input_1_1' >Email<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_email'>
+                                            <input name='input_1' id='input_1_1' type='email' value='' class='medium' tabindex='1'  placeholder='Enter your email' aria-required="true" aria-invalid="false" />
+                                        </div></li><li id='field_1_2'  class='gfield gform_hidden field_sublabel_below field_description_below gfield_visibility_visible gfield--hidden gfield--medium' ><input name='input_2' id='input_1_2' type='hidden' class='gform_hidden'  aria-invalid="false" value='uqg4bo' /></li><li id='field_1_3'  class='gfield gform_validation_container field_sublabel_below field_description_below gfield_visibility_visible gfield--honeypot gfield--' ><label class='gfield_label' for='input_1_3' >Email</label><div class='ginput_container'><input name='input_3' id='input_1_3' type='text' value='' autocomplete='off'/></div><div class='gfield_description' id='gfield_description__3'>This field is for validation purposes and should be left unchanged.</div></li>
+                                        </ul></div>
+                                        <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' value='I&#039;M IN' tabindex='2' onclick='if(window["gf_submitting_1"]){return false;}  if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_1"]){return false;} if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  jQuery("#gform_1").trigger("submit",[true]); }' /> <input type='hidden' name='gform_ajax' value='form_id=1&amp;title=&amp;description=1&amp;tabindex=1' />
+                                            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+                                            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+
+                                            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+                                            <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsImI4NDFhMDc0ODQ4ODY4ODYzNjM3OGI5MmQ5MGZkYmRjIl0=' />
+                                            <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+                                            <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+                                            <input type='hidden' name='gform_field_values' value='' />
+
+                                        </div>
+                                    </form>
+                                    </div>
+                                    <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_1' id='gform_ajax_frame_1' title='Ajax Frame'>This iframe contains the logic required to handle Ajax powered Gravity Forms.</iframe>
+                                    <script type='text/javascript'>jQuery(document).ready(function($){gformInitSpinner( 1, 'https://www.dictionary.com/e/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery('#gform_ajax_frame_1').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_1');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_1').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_1').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_1').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_1').val();gformInitSpinner( 1, 'https://www.dictionary.com/e/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery(document).trigger('gform_page_loaded', [1, current_page]);window['gf_submitting_1'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_1').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [1]);window['gf_submitting_1'] = false;}, 50);}else{jQuery('#gform_1').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [1, current_page]);} );} );</script><script type='text/javascript'> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 1) {if(typeof Placeholders != 'undefined'){
+                                    Placeholders.enable();
+                                }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script>  </div>
+                            </div>  </div>
+
+                        <div class="wotd-item__origin">
+                            <h3>
+                                What is the origin of <span style='color: #A92828'>foison?</span>  </h3>
+
+                            <div class="wotd-item__origin__text">
+                                The English noun <em>foison</em> is archaic in standard English, but it still occurs in Scottish English. <em>Foison</em> is a regular French phonetic development from the Vulgar Latin noun<em> fusiō</em> (inflectional stem fusiōn-), equivalent to the very rare Late Latin <em>fūsiō</em> (stem <em>fūsiōn</em>-) “a pouring out, effusion, melting (in metallurgy),” a derivative of the verb <em>fundere</em> “to pour, pour out, shed.” <em>Foison</em> came into English via Old French; its doublet, the English noun <em>fusion</em>, entered English straight from Latin in the mid-16th century.<em> Foison</em> entered English in the first half of the 14th century.    </div>
+
+                            <div class="wotd-item__origin__gradient"></div>
+                        </div><div class="wotd-item__examples">
+
+                        <h3>
+                            How is <span style='color: #A92828'>foison</span> used?  </h3>
+
+                        <div class="wotd-item__examples__text">
+                            <p>
+                                Then delicacies and dainties were delivered to the guests, / Fresh food in <strong>foison</strong>, such freight of full dishes ...
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;"><em>Sir Gaiwan and the Green Knight</em> (c1375), translated by Brian Stone, 1959</span>
+                            </p>
+                            <p>
+                            <div>... but nature should bring forth / Of its own kind all <strong>foison</strong>, all abundance, / To feed my innocent people.</div>
+                            <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">William Shakespeare, <em>The Tempest</em>, 1623</span>
+                            </p>
+                        </div>
+
+                        <div class="wotd-item__examples__gradient"></div>
+                    </div>
+
+                        <div class="wotd-item__widgets ">
+                            <div class="wotd-item__widget">
+                            </div>
+
+                            <div class="wotd-item__widget">
+                                <div class="wotd-widget__nav">
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/postprandial-2019-11-27/"
+                                            data-name="postprandial-2019-11-27"
+                                            class="wotd-widget__nav__next small"
+                                            style="border-color: #11A052"
+                                    >
+                                        <span>Nov 27</span>
+                                        postprandial    </a>
+
+                                </div>    </div>
+
+                            <div class="wotd-item__widget wotd-item__widget-form">
+
+                                <div class="wotd-item__form">
+                                    <div class="inner">
+                                        <h3>Get to know dictionary.com</h3>
+
+
+                                        <div class='gf_browser_gecko gform_wrapper' id='gform_wrapper_1' ><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_1' id='gform_1'  action='/e/word-of-the-day/'>
+                                            <div class='gform_heading'>
+                                                <span class='gform_description'>SIGN UP FOR A VOCABULARY BOOST IN YOUR EMAIL</span>
+                                            </div>
+                                            <div class='gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'><li id='field_1_1'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible gfield--email gfield--medium' ><label class='gfield_label' for='input_1_1' >Email<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_email'>
+                                                <input name='input_1' id='input_1_1' type='email' value='' class='medium' tabindex='501'  placeholder='Enter your email' aria-required="true" aria-invalid="false" />
+                                            </div></li><li id='field_1_2'  class='gfield gform_hidden field_sublabel_below field_description_below gfield_visibility_visible gfield--hidden gfield--medium' ><input name='input_2' id='input_1_2' type='hidden' class='gform_hidden'  aria-invalid="false" value='uqg4bo' /></li><li id='field_1_3'  class='gfield gform_validation_container field_sublabel_below field_description_below gfield_visibility_visible gfield--honeypot gfield--' ><label class='gfield_label' for='input_1_3' >Email</label><div class='ginput_container'><input name='input_3' id='input_1_3' type='text' value='' autocomplete='off'/></div><div class='gfield_description' id='gfield_description__3'>This field is for validation purposes and should be left unchanged.</div></li>
+                                            </ul></div>
+                                            <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' value='I&#039;M IN' tabindex='502' onclick='if(window["gf_submitting_1"]){return false;}  if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_1"]){return false;} if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  jQuery("#gform_1").trigger("submit",[true]); }' /> <input type='hidden' name='gform_ajax' value='form_id=1&amp;title=&amp;description=1&amp;tabindex=501' />
+                                                <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+                                                <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+
+                                                <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+                                                <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsImI4NDFhMDc0ODQ4ODY4ODYzNjM3OGI5MmQ5MGZkYmRjIl0=' />
+                                                <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+                                                <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+                                                <input type='hidden' name='gform_field_values' value='' />
+
+                                            </div>
+                                        </form>
+                                        </div>
+                                        <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_1' id='gform_ajax_frame_1' title='Ajax Frame'>This iframe contains the logic required to handle Ajax powered Gravity Forms.</iframe>
+                                        <script type='text/javascript'>jQuery(document).ready(function($){gformInitSpinner( 1, 'https://www.dictionary.com/e/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery('#gform_ajax_frame_1').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_1');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_1').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_1').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_1').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_1').val();gformInitSpinner( 1, 'https://www.dictionary.com/e/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery(document).trigger('gform_page_loaded', [1, current_page]);window['gf_submitting_1'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_1').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [1]);window['gf_submitting_1'] = false;}, 50);}else{jQuery('#gform_1').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [1, current_page]);} );} );</script><script type='text/javascript'> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 1) {if(typeof Placeholders != 'undefined'){
+                                        Placeholders.enable();
+                                    }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script>  </div>
+                                </div>      </div>
+                        </div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/postprandial-2019-11-27/"
+                                class="wotd-item__next-item"
+                                data-name="postprandial-2019-11-27"
+                        >
+                            Previous Day    </a>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                class="wotd-item__load-more hide"
+                                data-name="avocation-2019-11-21"
+                        >
+                            Load More</a>
+
+                        <div class="wotd-ad-bottom"></div>
+                    </li>
+
+                    <li
+                            class="wotd-item"
+                            data-name="postprandial-2019-11-27"
+                            data-url="https://www.dictionary.com/e/word-of-the-day/postprandial-2019-11-27/"
+                            data-color="#11A052"
+                            data-title="postprandial"
+                            data-date="Nov 27"
+                            data-is-ad-enabled="true"
+                            data-is-latest-post="false"
+                            data-page-title="Word of the Day - postprandial | Dictionary.com"
+                    >
+
+                        <div class="wotd-item__label">Word <span>of the</span> day</div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                data-name="avocation-2019-11-21"
+                                class="wotd-item__next-page hide "
+                        >
+                            Previous Week    </a>
+
+
+                        <div class="wotd-item__date">
+                            Wednesday, November 27, 2019  </div>
+
+                        <div class="wotd-item__definition" style="background-color: #11A052">
+                            <a
+                                    href="https://static.sfdict.com/audio/P06/P0677600.mp3"
+                                    class="wotd-item__definition__listen"
+                            ></a>
+
+                            <h1>postprandial</h1>
+
+                            <div class="wotd-item__definition__pronunciation">
+                                <span class="luna-pos">adjective</span> [pohst-<span class="bold">pran</span>-dee-<span class="italic">uh</span>l] <span class="italic"></span>    </div>
+
+                            <div class="wotd-item__definition__text ">
+                                after a meal, especially after dinner: <span class="luna-example italic">postprandial oratory; a postprandial brandy.</span>    </div>
+
+                            <a
+                                    href="https://www.dictionary.com/browse/postprandial"
+                                    class="wotd-item__link"
+                                    data-linkid="cks7jy"
+                            >
+                                Look it up  </a>
+                        </div>
+
+                        <div class="wotd-item__socials">
+
+                            <div class="share trigger-share-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fword-of-the-day%2Fpostprandial-2019-11-27%2F" class="ico-facebook" target="_blank" data-linkid="begyaa"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/intent/tweet/?text=Today&#039;s%20%23WordOftheDay%20on%20@Dictionarycom%20is%20postprandial&#038;url=https://www.dictionary.com/e/word-of-the-day/postprandial-2019-11-27/" class="ico-twitter" target="_blank" data-linkid="agbu2i"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://pinterest.com/pin/create/button/?url=https://www.dictionary.com/e/word-of-the-day/postprandial-2019-11-27/&#038;media=https://www.dictionary.com/e/wp-content/uploads/2019/11/20191127_postprandial.jpg&#038;description=Word%20of%20the%20Day%20-%20postprandial%20%23DictionaryCom" class="ico-pinterest" target="_blank" data-linkid="r0ond7"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="mailto:?subject=Word%20of%20the%20Day%20-%20postprandial%20|%20Dictionary.com&#038;body=I%20discovered%20the%20Word%20of%20the%20Day%20from%20Dictionary.com%2C%20and%20I%20wanted%20to%20share%20it%20with%20you.%20https://www.dictionary.com/e/word-of-the-day/postprandial-2019-11-27/" class="ico-email" target="_blank" data-linkid="m52euo"></a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.share -->
+                        </div>
+
+                        <div class="wotd-item__bottom">
+                        </div>
+
+                        <div class="wotd-item__origin">
+                            <h3>
+                                What is the origin of <span style='color: #11A052'>postprandial?</span>  </h3>
+
+                            <div class="wotd-item__origin__text">
+                                The Latin noun <em>prandium</em> means “midday meal, lunch, luncheon”; the verb <em>prandēre</em> “to have breakfast or lunch” is a derivative of <em>prandium</em>. There is no Latin adjective <em>prandiālis</em> “pertaining to breakfast or lunch,” let alone the adjectives <em>preprandiālis</em> (<em>praeprandiālis</em>) or <em>postprandiālis</em>. There is, however, the Late Latin noun <em>prandiculum</em> “breakfast,” which is found only in lexicographical writings--a salutary warning! <em>Postprandial</em> is used in medicine in its literal meaning “done or happening after a meal.” Apart from medical usage <em>postprandial</em> is a jocular word, as in this example from George Bernard Shaw, “The whole thing was mere postprandial brag, war-game and club-fender gossip” (1917). <em>Postprandial</em> entered English in the first half of the 19th century.    </div>
+
+                            <div class="wotd-item__origin__gradient"></div>
+                        </div><div class="wotd-item__examples">
+
+                        <h3>
+                            How is <span style='color: #11A052'>postprandial</span> used?  </h3>
+
+                        <div class="wotd-item__examples__text">
+                            <p>
+                                Most people seem to switch on the game a few minutes after having wolfed down their fifth slice of pie, but if you do that, there’s the cognitive dissonance of watching professional athletes and cheerleaders vigorously moving their bodies while your own body lies on the couch in a state of <strong>postprandial</strong> lethargy and bloat.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Jeff Gordinier, "Is It Inappropriate to Watch Football While Eating Thanksgiving With My Family?" <em>New York Times</em>, November 18, 2011</span>
+                            </p>
+                            <p>
+                                The <strong>postprandial</strong> conversation goes on until dawn.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Roberto Bolaño, <em>Woes of the True Policeman</em>, translated by Natasha Wimmer, 2012</span>
+                            </p>
+                        </div>
+
+                        <div class="wotd-item__examples__gradient"></div>
+                    </div>
+
+                        <div class="wotd-item__widgets hide">
+                            <div class="wotd-item__widget">
+                            </div>
+
+                            <div class="wotd-item__widget">
+                                <div class="wotd-widget__nav">
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/stargazer-2019-11-26/"
+                                            data-name="stargazer-2019-11-26"
+                                            class="wotd-widget__nav__next small"
+                                            style="border-color: #2ABFE4"
+                                    >
+                                        <span>Nov 26</span>
+                                        stargazer    </a>
+
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day"
+                                            data-name="foison-2019-11-28"
+                                            class="wotd-widget__nav__prev "
+                                            style="border-color: #A92828"
+                                    >
+                                        <span>Nov 28</span>
+                                        foison    </a>
+                                </div>    </div>
+
+                        </div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/stargazer-2019-11-26/"
+                                class="wotd-item__next-item"
+                                data-name="stargazer-2019-11-26"
+                        >
+                            Previous Day    </a>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                class="wotd-item__load-more hide"
+                                data-name="avocation-2019-11-21"
+                        >
+                            Load More</a>
+
+                    </li>
+
+                    <li
+                            class="wotd-item"
+                            data-name="stargazer-2019-11-26"
+                            data-url="https://www.dictionary.com/e/word-of-the-day/stargazer-2019-11-26/"
+                            data-color="#2ABFE4"
+                            data-title="stargazer"
+                            data-date="Nov 26"
+                            data-is-ad-enabled="true"
+                            data-is-latest-post="false"
+                            data-page-title="Word of the Day - stargazer | Dictionary.com"
+                    >
+
+                        <div class="wotd-item__label">Word <span>of the</span> day</div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                data-name="avocation-2019-11-21"
+                                class="wotd-item__next-page hide "
+                        >
+                            Previous Week    </a>
+
+
+                        <div class="wotd-item__date">
+                            Tuesday, November 26, 2019  </div>
+
+                        <div class="wotd-item__definition" style="background-color: #2ABFE4">
+                            <a
+                                    href="https://static.sfdict.com/audio/S08/S0891800.mp3"
+                                    class="wotd-item__definition__listen"
+                            ></a>
+
+                            <h1>stargazer</h1>
+
+                            <div class="wotd-item__definition__pronunciation">
+                                <span class="luna-pos">noun</span> [<span class="bold">stahr</span>-gey-zer] <span class="italic"></span>    </div>
+
+                            <div class="wotd-item__definition__text ">
+                                a daydreamer.    </div>
+
+                            <a
+                                    href="https://www.dictionary.com/browse/stargazer"
+                                    class="wotd-item__link"
+                                    data-linkid="cks7jy"
+                            >
+                                Look it up  </a>
+                        </div>
+
+                        <div class="wotd-item__socials">
+
+                            <div class="share trigger-share-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fword-of-the-day%2Fstargazer-2019-11-26%2F" class="ico-facebook" target="_blank" data-linkid="begyaa"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/intent/tweet/?text=Today&#039;s%20%23WordOftheDay%20on%20@Dictionarycom%20is%20stargazer&#038;url=https://www.dictionary.com/e/word-of-the-day/stargazer-2019-11-26/" class="ico-twitter" target="_blank" data-linkid="agbu2i"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://pinterest.com/pin/create/button/?url=https://www.dictionary.com/e/word-of-the-day/stargazer-2019-11-26/&#038;media=https://www.dictionary.com/e/wp-content/uploads/2019/11/20191126_stargazer.jpg&#038;description=Word%20of%20the%20Day%20-%20stargazer%20%23DictionaryCom" class="ico-pinterest" target="_blank" data-linkid="r0ond7"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="mailto:?subject=Word%20of%20the%20Day%20-%20stargazer%20|%20Dictionary.com&#038;body=I%20discovered%20the%20Word%20of%20the%20Day%20from%20Dictionary.com%2C%20and%20I%20wanted%20to%20share%20it%20with%20you.%20https://www.dictionary.com/e/word-of-the-day/stargazer-2019-11-26/" class="ico-email" target="_blank" data-linkid="m52euo"></a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.share -->
+                        </div>
+
+                        <div class="wotd-item__bottom">
+                        </div>
+
+                        <div class="wotd-item__origin">
+                            <h3>
+                                What is the origin of <span style='color: #2ABFE4'>stargazer?</span>  </h3>
+
+                            <div class="wotd-item__origin__text">
+                                <em>Stargazer</em> originally had a very derogatory meaning. The word first appears in English in the Geneva Bible, an English translation that appeared between 1557 and 1560. In Isaiah 47:13 in the King James Version, differing only slightly from the earlier Geneva Bible, the text reads “Thou [i.e. the “virgin daughter of Babylon”] art wearied in the multitude of thy counsels. Let now the astrologers, the stargazers, the monthly prognosticators, stand up, and save thee from these things that shall come upon thee.” The text is scornful of idolatrous customs. In Daniel Defoe’s<em> A system of magick</em> (1727), we still see the same contemptuous usage as in the Geneva Bible but somewhat qualified to mean astronomer, “The Eminent Dr. H—— may be call'd the King's Astronomer, or as the more Eminent Mr. Flamstead usually call'd himself, the King's Star-gazer.” It is only in the first half of the 19th century that <em>stargazer</em> acquires the benign sense of amateur astronomer, "The mere star-gazer who is an Astronomer simply in the respect that he is the owner of a telescope.” <em>Stargazer</em> in the sense “daydreamer, impractical idealist” first occurs in Emerson’s <em>Transcendentalist</em>, “The materialist..mocks at..star-gazers and dreamers.”    </div>
+
+                            <div class="wotd-item__origin__gradient"></div>
+                        </div><div class="wotd-item__examples">
+
+                        <h3>
+                            How is <span style='color: #2ABFE4'>stargazer</span> used?  </h3>
+
+                        <div class="wotd-item__examples__text">
+                            <p>
+                                The materialist, secure in the certainty of sensation, mocks at fine-spun theories, at <strong>star-gazers</strong> and dreamers, and believes that his life is solid,
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Ralph Waldo Emerson, "The Transcendentalist," Lecture at Masonic Temple, January 1842</span>
+                            </p>
+                            <p>
+                                He was a <strong>stargazer</strong> in both senses. ... a man who questioned givens, resisted the forces of fate and tradition, saw himself as part of the picture.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Peter Standish, <em>Understanding Julio Cortázar, </em>2001</span>
+                            </p>
+                        </div>
+
+                        <div class="wotd-item__examples__gradient"></div>
+                    </div>
+
+                        <div class="wotd-item__widgets hide">
+                            <div class="wotd-item__widget">
+                            </div>
+
+                            <div class="wotd-item__widget">
+                                <div class="wotd-widget__nav">
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/horologium-2019-11-25/"
+                                            data-name="horologium-2019-11-25"
+                                            class="wotd-widget__nav__next small"
+                                            style="border-color: #ec9393"
+                                    >
+                                        <span>Nov 25</span>
+                                        horologium    </a>
+
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/postprandial-2019-11-27/"
+                                            data-name="postprandial-2019-11-27"
+                                            class="wotd-widget__nav__prev small"
+                                            style="border-color: #11A052"
+                                    >
+                                        <span>Nov 27</span>
+                                        postprandial    </a>
+                                </div>    </div>
+
+                        </div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/horologium-2019-11-25/"
+                                class="wotd-item__next-item"
+                                data-name="horologium-2019-11-25"
+                        >
+                            Previous Day    </a>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                class="wotd-item__load-more hide"
+                                data-name="avocation-2019-11-21"
+                        >
+                            Load More</a>
+
+                    </li>
+
+                    <li
+                            class="wotd-item"
+                            data-name="horologium-2019-11-25"
+                            data-url="https://www.dictionary.com/e/word-of-the-day/horologium-2019-11-25/"
+                            data-color="#ec9393"
+                            data-title="horologium"
+                            data-date="Nov 25"
+                            data-is-ad-enabled="true"
+                            data-is-latest-post="false"
+                            data-page-title="Word of the Day - horologium | Dictionary.com"
+                    >
+
+                        <div class="wotd-item__label">Word <span>of the</span> day</div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                data-name="avocation-2019-11-21"
+                                class="wotd-item__next-page hide "
+                        >
+                            Previous Week    </a>
+
+
+                        <div class="wotd-item__date">
+                            Monday, November 25, 2019  </div>
+
+                        <div class="wotd-item__definition" style="background-color: #ec9393">
+                            <a
+                                    href="https://static.sfdict.com/audio/H03/H0382800.mp3"
+                                    class="wotd-item__definition__listen"
+                            ></a>
+
+                            <h1>horologium</h1>
+
+                            <div class="wotd-item__definition__pronunciation">
+                                <span class="luna-pos">noun</span> [hawr-<span class="italic">uh</span>-<span class="bold">loh</span>-jee-<span class="italic">uh</span> m, hor-] <span class="italic"></span>    </div>
+
+                            <div class="wotd-item__definition__text ">
+                                a timepiece, as a clock or sundial, or a building supporting or containing a timepiece.    </div>
+
+                            <a
+                                    href="https://www.dictionary.com/browse/horologium"
+                                    class="wotd-item__link"
+                                    data-linkid="cks7jy"
+                            >
+                                Look it up  </a>
+                        </div>
+
+                        <div class="wotd-item__socials">
+
+                            <div class="share trigger-share-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fword-of-the-day%2Fhorologium-2019-11-25%2F" class="ico-facebook" target="_blank" data-linkid="begyaa"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/intent/tweet/?text=Today&#039;s%20%23WordOftheDay%20on%20@Dictionarycom%20is%20horologium&#038;url=https://www.dictionary.com/e/word-of-the-day/horologium-2019-11-25/" class="ico-twitter" target="_blank" data-linkid="agbu2i"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://pinterest.com/pin/create/button/?url=https://www.dictionary.com/e/word-of-the-day/horologium-2019-11-25/&#038;media=https://www.dictionary.com/e/wp-content/uploads/2019/11/20191125_horologium1.jpg&#038;description=Word%20of%20the%20Day%20-%20horologium%20%23DictionaryCom" class="ico-pinterest" target="_blank" data-linkid="r0ond7"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="mailto:?subject=Word%20of%20the%20Day%20-%20horologium%20|%20Dictionary.com&#038;body=I%20discovered%20the%20Word%20of%20the%20Day%20from%20Dictionary.com%2C%20and%20I%20wanted%20to%20share%20it%20with%20you.%20https://www.dictionary.com/e/word-of-the-day/horologium-2019-11-25/" class="ico-email" target="_blank" data-linkid="m52euo"></a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.share -->
+                        </div>
+
+                        <div class="wotd-item__bottom">
+                        </div>
+
+                        <div class="wotd-item__origin">
+                            <h3>
+                                What is the origin of <span style='color: #ec9393'>horologium?</span>  </h3>
+
+                            <div class="wotd-item__origin__text">
+                                There are nearly a score—20!—spellings in Middle English for<em> horologium</em>, and nearly as many in Old French. <em>Horologium</em> comes from the Latin noun <em>hōrologium</em> “an instrument for showing the time, a dial, sundial, hourglass, clock, clepsydra (water clock).” <em>Hōrologium</em> is a Latin borrowing of Greek <em>hōrológion</em> with the same meaning. Greek <em>hōrológion</em> is a compound of <em>hōrológos</em> “teller of time” and the diminutive noun suffix -ion. <em>Hōrológos</em> is a compound of <em>hṓra</em> “year, season, hour, time, time of day, the right time, time of ripening or florescence,” which was taken into Latin wholesale as <em>hōra</em> with all its meanings (hour comes into English via Old French from Latin). The element or word <em>logos</em> “word, speech, account, computation, reason” is very familiar in English as the suffix -<em>logy</em>, as in <em>philology</em>, <em>theology</em>, <em>paleontology</em>. <em>Horologium</em> entered English in the second half of the 14th century.    </div>
+
+                            <div class="wotd-item__origin__gradient"></div>
+                        </div><div class="wotd-item__examples">
+
+                        <h3>
+                            How is <span style='color: #ec9393'>horologium</span> used?  </h3>
+
+                        <div class="wotd-item__examples__text">
+                            <p>
+                                In this <strong>Horologium</strong> moves the hand or arrow towards the twenty-four, and to the right of the twenty-four it was yesterday, and to the left, today.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Umberto Eco, <em>The Island of the Day Before</em>, translated by William Weaver, 1995</span>
+                            </p>
+                            <p>
+                                It appears this <strong>horologium</strong> was an elaborate piece of mechanism furnished with many painted images, which no doubt performed curious evolutions.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Willis I. Milham, <em>Time and Timekeepers</em>, 1923</span>
+                            </p>
+                        </div>
+
+                        <div class="wotd-item__examples__gradient"></div>
+                    </div>
+
+                        <div class="wotd-item__widgets hide">
+                            <div class="wotd-item__widget">
+                            </div>
+
+                            <div class="wotd-item__widget">
+                                <div class="wotd-widget__nav">
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/copacetic-2019-11-24/"
+                                            data-name="copacetic-2019-11-24"
+                                            class="wotd-widget__nav__next small"
+                                            style="border-color: #4C3698"
+                                    >
+                                        <span>Nov 24</span>
+                                        copacetic    </a>
+
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/stargazer-2019-11-26/"
+                                            data-name="stargazer-2019-11-26"
+                                            class="wotd-widget__nav__prev small"
+                                            style="border-color: #2ABFE4"
+                                    >
+                                        <span>Nov 26</span>
+                                        stargazer    </a>
+                                </div>    </div>
+
+                        </div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/copacetic-2019-11-24/"
+                                class="wotd-item__next-item"
+                                data-name="copacetic-2019-11-24"
+                        >
+                            Previous Day    </a>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                class="wotd-item__load-more hide"
+                                data-name="avocation-2019-11-21"
+                        >
+                            Load More</a>
+
+                    </li>
+
+                    <li
+                            class="wotd-item"
+                            data-name="copacetic-2019-11-24"
+                            data-url="https://www.dictionary.com/e/word-of-the-day/copacetic-2019-11-24/"
+                            data-color="#4C3698"
+                            data-title="copacetic"
+                            data-date="Nov 24"
+                            data-is-ad-enabled="true"
+                            data-is-latest-post="false"
+                            data-page-title="Word of the Day - copacetic | Dictionary.com"
+                    >
+
+                        <div class="wotd-item__label">Word <span>of the</span> day</div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                data-name="avocation-2019-11-21"
+                                class="wotd-item__next-page hide "
+                        >
+                            Previous Week    </a>
+
+
+                        <div class="wotd-item__date">
+                            Sunday, November 24, 2019  </div>
+
+                        <div class="wotd-item__definition" style="background-color: #4C3698">
+                            <a
+                                    href="https://static.sfdict.com/audio/C08/C0825300.mp3"
+                                    class="wotd-item__definition__listen"
+                            ></a>
+
+                            <h1>copacetic</h1>
+
+                            <div class="wotd-item__definition__pronunciation">
+                                <span class="luna-pos">adjective</span> [koh-p<span class="italic">uh</span>-<span class="bold">set</span>-ik, -<span class="bold">see</span>-tik] <span class="italic"> <span class="luna-labset"><span class="luna-label italic">Slang</span></span>.</span>    </div>
+
+                            <div class="wotd-item__definition__text ">
+                                fine; completely satisfactory; OK.    </div>
+
+                            <a
+                                    href="https://www.dictionary.com/browse/copacetic"
+                                    class="wotd-item__link"
+                                    data-linkid="cks7jy"
+                            >
+                                Look it up  </a>
+                        </div>
+
+                        <div class="wotd-item__socials">
+
+                            <div class="share trigger-share-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fword-of-the-day%2Fcopacetic-2019-11-24%2F" class="ico-facebook" target="_blank" data-linkid="begyaa"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/intent/tweet/?text=Today&#039;s%20%23WordOftheDay%20on%20@Dictionarycom%20is%20copacetic&#038;url=https://www.dictionary.com/e/word-of-the-day/copacetic-2019-11-24/" class="ico-twitter" target="_blank" data-linkid="agbu2i"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://pinterest.com/pin/create/button/?url=https://www.dictionary.com/e/word-of-the-day/copacetic-2019-11-24/&#038;media=https://www.dictionary.com/e/wp-content/uploads/2019/11/20191124_copacetic.jpg&#038;description=Word%20of%20the%20Day%20-%20copacetic%20%23DictionaryCom" class="ico-pinterest" target="_blank" data-linkid="r0ond7"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="mailto:?subject=Word%20of%20the%20Day%20-%20copacetic%20|%20Dictionary.com&#038;body=I%20discovered%20the%20Word%20of%20the%20Day%20from%20Dictionary.com%2C%20and%20I%20wanted%20to%20share%20it%20with%20you.%20https://www.dictionary.com/e/word-of-the-day/copacetic-2019-11-24/" class="ico-email" target="_blank" data-linkid="m52euo"></a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.share -->
+                        </div>
+
+                        <div class="wotd-item__bottom">
+                        </div>
+
+                        <div class="wotd-item__origin">
+                            <h3>
+                                What is the origin of <span style='color: #4C3698'>copacetic?</span>  </h3>
+
+                            <div class="wotd-item__origin__text">
+                                <em>Copacetic</em> first appears in the generation before World War II, in 1919 to be exact. It is a thoroughly American piece of slang, and all the citations of the word come from American writers. Perhaps foreigners avoided <em>copacetic</em> because of all its variant spellings, which include <em>copa</em>, <em>copasetic</em>, <em>copasetty</em>, <em>copesette(e)</em>, <em>copissettic</em>, <em>copus</em>, <em>kopacetic</em>, <em>kopasetic</em>, <em>kopasetee</em>…. Many slang terms have no reliable etymology, and <em>copacetic</em> is within that happy group. Some of the more fanciful, not to say outrageous or just plain nutty etymologies for copacetic include; 1) Chinook jargon <em>copasenee</em> “everything is satisfactory (along the waterways of Washington State)”; 2) the excruciating phrase “the cop is on the settee” (i.e., he’s not paying attention), which transmogrified into <em>copacetic</em> and was supposedly used by American gangsters; or 3) an Italian word, but unknown in standard Italian or in any of its many dialects. Bill “Bojangles” Robinson claimed to have coined <em>copacetic</em> (not likely), but he did popularize <em>copacetic</em> in his vaudeville acts, radio programs, and movies he made with Shirley Temple in the 1930s.    </div>
+
+                            <div class="wotd-item__origin__gradient"></div>
+                        </div><div class="wotd-item__examples">
+
+                        <h3>
+                            How is <span style='color: #4C3698'>copacetic</span> used?  </h3>
+
+                        <div class="wotd-item__examples__text">
+                            <p>
+                                The United States of the 1960s experienced many social upheavals. But in one realm, all was <strong>copacetic</strong>.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Michael Tomasky, "The Real Legacy of the 1970s," <em>New York Times,</em> February 2, 2019</span>
+                            </p>
+                            <p>
+                                If he signed a paper saying he wouldn't make any speeches, everything would be <strong>copacetic</strong>.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Colson Whitehead, <em>John Henry Days</em>, 2001</span>
+                            </p>
+                        </div>
+
+                        <div class="wotd-item__examples__gradient"></div>
+                    </div>
+
+                        <div class="wotd-item__widgets hide">
+                            <div class="wotd-item__widget">
+                            </div>
+
+                            <div class="wotd-item__widget">
+                                <div class="wotd-widget__nav">
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/gusto-2019-11-23/"
+                                            data-name="gusto-2019-11-23"
+                                            class="wotd-widget__nav__next "
+                                            style="border-color: #BB2F89"
+                                    >
+                                        <span>Nov 23</span>
+                                        gusto    </a>
+
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/horologium-2019-11-25/"
+                                            data-name="horologium-2019-11-25"
+                                            class="wotd-widget__nav__prev small"
+                                            style="border-color: #ec9393"
+                                    >
+                                        <span>Nov 25</span>
+                                        horologium    </a>
+                                </div>    </div>
+
+                        </div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/gusto-2019-11-23/"
+                                class="wotd-item__next-item"
+                                data-name="gusto-2019-11-23"
+                        >
+                            Previous Day    </a>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                class="wotd-item__load-more hide"
+                                data-name="avocation-2019-11-21"
+                        >
+                            Load More</a>
+
+                    </li>
+
+                    <li
+                            class="wotd-item"
+                            data-name="gusto-2019-11-23"
+                            data-url="https://www.dictionary.com/e/word-of-the-day/gusto-2019-11-23/"
+                            data-color="#BB2F89"
+                            data-title="gusto"
+                            data-date="Nov 23"
+                            data-is-ad-enabled="true"
+                            data-is-latest-post="false"
+                            data-page-title="Word of the Day - gusto | Dictionary.com"
+                    >
+
+                        <div class="wotd-item__label">Word <span>of the</span> day</div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                data-name="avocation-2019-11-21"
+                                class="wotd-item__next-page hide "
+                        >
+                            Previous Week    </a>
+
+
+                        <div class="wotd-item__date">
+                            Saturday, November 23, 2019  </div>
+
+                        <div class="wotd-item__definition" style="background-color: #BB2F89">
+                            <a
+                                    href="https://static.sfdict.com/audio/G04/G0411200.mp3"
+                                    class="wotd-item__definition__listen"
+                            ></a>
+
+                            <h1>gusto</h1>
+
+                            <div class="wotd-item__definition__pronunciation">
+                                <span class="luna-pos">noun</span> [<span class="bold">guhs</span>-toh] <span class="italic"></span>    </div>
+
+                            <div class="wotd-item__definition__text ">
+                                hearty or keen enjoyment, as in eating or drinking, or in action or speech in general: <span class="luna-example italic">to dance with gusto.</span>    </div>
+
+                            <a
+                                    href="https://www.dictionary.com/browse/gusto"
+                                    class="wotd-item__link"
+                                    data-linkid="cks7jy"
+                            >
+                                Look it up  </a>
+                        </div>
+
+                        <div class="wotd-item__socials">
+
+                            <div class="share trigger-share-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fword-of-the-day%2Fgusto-2019-11-23%2F" class="ico-facebook" target="_blank" data-linkid="begyaa"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/intent/tweet/?text=Today&#039;s%20%23WordOftheDay%20on%20@Dictionarycom%20is%20gusto&#038;url=https://www.dictionary.com/e/word-of-the-day/gusto-2019-11-23/" class="ico-twitter" target="_blank" data-linkid="agbu2i"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://pinterest.com/pin/create/button/?url=https://www.dictionary.com/e/word-of-the-day/gusto-2019-11-23/&#038;media=https://www.dictionary.com/e/wp-content/uploads/2019/11/20191123_gusto.jpg&#038;description=Word%20of%20the%20Day%20-%20gusto%20%23DictionaryCom" class="ico-pinterest" target="_blank" data-linkid="r0ond7"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="mailto:?subject=Word%20of%20the%20Day%20-%20gusto%20|%20Dictionary.com&#038;body=I%20discovered%20the%20Word%20of%20the%20Day%20from%20Dictionary.com%2C%20and%20I%20wanted%20to%20share%20it%20with%20you.%20https://www.dictionary.com/e/word-of-the-day/gusto-2019-11-23/" class="ico-email" target="_blank" data-linkid="m52euo"></a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.share -->
+                        </div>
+
+                        <div class="wotd-item__bottom">
+                        </div>
+
+                        <div class="wotd-item__origin">
+                            <h3>
+                                What is the origin of <span style='color: #BB2F89'>gusto?</span>  </h3>
+
+                            <div class="wotd-item__origin__text">
+                                <em>Gusto</em> comes from the Italian noun <em>gusto</em> “taste, flavor,” from Latin <em>gustus</em> “tasting, flavor, sense of taste.” <em>Gustus</em> is also the source of Spanish and Portuguese <em>gosto</em> and French <em>goût</em>, all meaning “taste, flavor, relish.” The main current sense of <em>gusto</em>, “keen enjoyment,” first appeared in 1629 but only started to become very common in the early 19th century.    </div>
+
+                            <div class="wotd-item__origin__gradient"></div>
+                        </div><div class="wotd-item__examples">
+
+                        <h3>
+                            How is <span style='color: #BB2F89'>gusto</span> used?  </h3>
+
+                        <div class="wotd-item__examples__text">
+                            <p>
+                                She ate with <strong>gusto</strong>, sending particles of egg flying onto the table as she spoke.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Anna Esaki-Smith, <em>Meeting Luciano</em>, 1999</span>
+                            </p>
+                            <p>
+                                Anna could hear her father singing with <strong>gusto</strong>.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">D. H. Lawrence, <em>The Rainbow</em>, 1915</span>
+                            </p>
+                        </div>
+
+                        <div class="wotd-item__examples__gradient"></div>
+                    </div>
+
+                        <div class="wotd-item__widgets hide">
+                            <div class="wotd-item__widget">
+                            </div>
+
+                            <div class="wotd-item__widget">
+                                <div class="wotd-widget__nav">
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/usageaster-2019-11-22/"
+                                            data-name="usageaster-2019-11-22"
+                                            class="wotd-widget__nav__next small"
+                                            style="border-color: #609428"
+                                    >
+                                        <span>Nov 22</span>
+                                        usageaster    </a>
+
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/copacetic-2019-11-24/"
+                                            data-name="copacetic-2019-11-24"
+                                            class="wotd-widget__nav__prev small"
+                                            style="border-color: #4C3698"
+                                    >
+                                        <span>Nov 24</span>
+                                        copacetic    </a>
+                                </div>    </div>
+
+                        </div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/usageaster-2019-11-22/"
+                                class="wotd-item__next-item"
+                                data-name="usageaster-2019-11-22"
+                        >
+                            Previous Day    </a>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                class="wotd-item__load-more hide"
+                                data-name="avocation-2019-11-21"
+                        >
+                            Load More</a>
+
+                    </li>
+
+                    <li
+                            class="wotd-item"
+                            data-name="usageaster-2019-11-22"
+                            data-url="https://www.dictionary.com/e/word-of-the-day/usageaster-2019-11-22/"
+                            data-color="#609428"
+                            data-title="usageaster"
+                            data-date="Nov 22"
+                            data-is-ad-enabled="true"
+                            data-is-latest-post="false"
+                            data-page-title="Word of the Day - usageaster | Dictionary.com"
+                    >
+
+                        <div class="wotd-item__label">Word <span>of the</span> day</div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                data-name="avocation-2019-11-21"
+                                class="wotd-item__next-page hide "
+                        >
+                            Previous Week    </a>
+
+
+                        <div class="wotd-item__date">
+                            Friday, November 22, 2019  </div>
+
+                        <div class="wotd-item__definition" style="background-color: #609428">
+                            <a
+                                    href="https://static.sfdict.com/audio/U01/U0171600.mp3"
+                                    class="wotd-item__definition__listen"
+                            ></a>
+
+                            <h1>usageaster</h1>
+
+                            <div class="wotd-item__definition__pronunciation">
+                                <span class="luna-pos">noun</span> [<span class="bold">yoo</span>-sij-as-ter] <span class="italic"></span>    </div>
+
+                            <div class="wotd-item__definition__text ">
+                                a self-styled authority on language usage.    </div>
+
+                            <a
+                                    href="https://www.dictionary.com/browse/usageaster"
+                                    class="wotd-item__link"
+                                    data-linkid="cks7jy"
+                            >
+                                Look it up  </a>
+                        </div>
+
+                        <div class="wotd-item__socials">
+
+                            <div class="share trigger-share-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fword-of-the-day%2Fusageaster-2019-11-22%2F" class="ico-facebook" target="_blank" data-linkid="begyaa"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/intent/tweet/?text=Today&#039;s%20%23WordOftheDay%20on%20@Dictionarycom%20is%20usageaster&#038;url=https://www.dictionary.com/e/word-of-the-day/usageaster-2019-11-22/" class="ico-twitter" target="_blank" data-linkid="agbu2i"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://pinterest.com/pin/create/button/?url=https://www.dictionary.com/e/word-of-the-day/usageaster-2019-11-22/&#038;media=https://www.dictionary.com/e/wp-content/uploads/2019/11/20191122_usageaster.jpg&#038;description=Word%20of%20the%20Day%20-%20usageaster%20%23DictionaryCom" class="ico-pinterest" target="_blank" data-linkid="r0ond7"></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="mailto:?subject=Word%20of%20the%20Day%20-%20usageaster%20|%20Dictionary.com&#038;body=I%20discovered%20the%20Word%20of%20the%20Day%20from%20Dictionary.com%2C%20and%20I%20wanted%20to%20share%20it%20with%20you.%20https://www.dictionary.com/e/word-of-the-day/usageaster-2019-11-22/" class="ico-email" target="_blank" data-linkid="m52euo"></a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.share -->
+                        </div>
+
+                        <div class="wotd-item__bottom">
+                        </div>
+
+                        <div class="wotd-item__origin">
+                            <h3>
+                                What is the origin of <span style='color: #609428'>usageaster?</span>  </h3>
+
+                            <div class="wotd-item__origin__text">
+                                A true expert on language usage will know that using <em>usageaster</em> “a self-styled authority on language usage” is not meant kindly. For instance: “The reader was no more than a usageaster; he insisted on corrections that were merely a matter of style, not grammar.” <em>Usageaster</em> is composed of <em>usage</em> and the <em>-aster</em>, which is a “diminutive or pejorative suffix denoting something that imperfectly resembles or mimics the true thing.” This suffix, derived from Latin, can also be found in such words as <em>poetaster</em> “an inferior poet” and <em>criticaster</em> “incompetent critic.”    </div>
+
+                            <div class="wotd-item__origin__gradient"></div>
+                        </div><div class="wotd-item__examples">
+
+                        <h3>
+                            How is <span style='color: #609428'>usageaster</span> used?  </h3>
+
+                        <div class="wotd-item__examples__text">
+                            <p>
+                                We can help such people overcome their insecurity by making a clear distinction between <strong>usageasters</strong> and usage experts.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Thomas L. Clark, "The Usageasters," <em>American Speech</em>, Vol. 55, No. 2, 1980</span>
+                            </p>
+                            <p>
+                                ... a <strong>usageaster</strong> pretends to know about questions of usage in language.
+                                <span style="text-transform: uppercase; font-style: italic; line-height: 1.3;">Allan Metcalf, <em>Predicting New Words</em>, 2002</span>
+                            </p>
+                        </div>
+
+                        <div class="wotd-item__examples__gradient"></div>
+                    </div>
+
+                        <div class="wotd-item__widgets hide">
+                            <div class="wotd-item__widget">
+                            </div>
+
+                            <div class="wotd-item__widget">
+                                <div class="wotd-widget__nav">
+
+                                    <a
+                                            href="https://www.dictionary.com/e/word-of-the-day/gusto-2019-11-23/"
+                                            data-name="gusto-2019-11-23"
+                                            class="wotd-widget__nav__prev "
+                                            style="border-color: #BB2F89"
+                                    >
+                                        <span>Nov 23</span>
+                                        gusto    </a>
+                                </div>    </div>
+
+                        </div>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                class="wotd-item__next-item"
+                                data-name="avocation-2019-11-21"
+                        >
+                            Previous Day    </a>
+
+                        <a
+                                href="https://www.dictionary.com/e/word-of-the-day/avocation-2019-11-21/"
+                                class="wotd-item__load-more hide"
+                                data-name="avocation-2019-11-21"
+                        >
+                            Load More</a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="wotd-sidebar">
+                <div class="wotd-widget__nav">
+                    <a
+                            href="https://www.dictionary.com/e/word-of-the-day/postprandial-2019-11-27/"
+                            data-name="postprandial-2019-11-27"
+                            class="wotd-widget__nav__next small"
+                            style="border-color: #11A052"
+                    >
+                        <span>Nov 27</span>
+                        postprandial    </a>
+
+                </div><div class="wotd-widget__ad"></div>
+            </div>
+        </div>
+    </div>
+    <section class="section section-signup">
+        <div class="shell">
+
+
+            <div class='gf_browser_gecko gform_wrapper' id='gform_wrapper_1' ><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_1' id='gform_1'  action='/e/word-of-the-day/'>
+                <div class='gform_heading'>
+                    <span class='gform_description'>SIGN UP FOR A VOCABULARY BOOST IN YOUR EMAIL</span>
+                </div>
+                <div class='gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'><li id='field_1_1'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible gfield--email gfield--medium' ><label class='gfield_label' for='input_1_1' >Email<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_email'>
+                    <input name='input_1' id='input_1_1' type='email' value='' class='medium' tabindex='1001'  placeholder='Enter your email' aria-required="true" aria-invalid="false" />
+                </div></li><li id='field_1_2'  class='gfield gform_hidden field_sublabel_below field_description_below gfield_visibility_visible gfield--hidden gfield--medium' ><input name='input_2' id='input_1_2' type='hidden' class='gform_hidden'  aria-invalid="false" value='uqg4bo' /></li><li id='field_1_3'  class='gfield gform_validation_container field_sublabel_below field_description_below gfield_visibility_visible gfield--honeypot gfield--' ><label class='gfield_label' for='input_1_3' >Email</label><div class='ginput_container'><input name='input_3' id='input_1_3' type='text' value='' autocomplete='off'/></div><div class='gfield_description' id='gfield_description__3'>This field is for validation purposes and should be left unchanged.</div></li>
+                </ul></div>
+                <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' value='I&#039;M IN' tabindex='1002' onclick='if(window["gf_submitting_1"]){return false;}  if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_1"]){return false;} if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  jQuery("#gform_1").trigger("submit",[true]); }' /> <input type='hidden' name='gform_ajax' value='form_id=1&amp;title=&amp;description=1&amp;tabindex=1001' />
+                    <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+                    <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+
+                    <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+                    <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsImI4NDFhMDc0ODQ4ODY4ODYzNjM3OGI5MmQ5MGZkYmRjIl0=' />
+                    <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+                    <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+                    <input type='hidden' name='gform_field_values' value='' />
+
+                </div>
+            </form>
+            </div>
+            <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_1' id='gform_ajax_frame_1' title='Ajax Frame'>This iframe contains the logic required to handle Ajax powered Gravity Forms.</iframe>
+            <script type='text/javascript'>jQuery(document).ready(function($){gformInitSpinner( 1, 'https://www.dictionary.com/e/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery('#gform_ajax_frame_1').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_1');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_1').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_1').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_1').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_1').val();gformInitSpinner( 1, 'https://www.dictionary.com/e/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery(document).trigger('gform_page_loaded', [1, current_page]);window['gf_submitting_1'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_1').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [1]);window['gf_submitting_1'] = false;}, 50);}else{jQuery('#gform_1').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [1, current_page]);} );} );</script><script type='text/javascript'> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 1) {if(typeof Placeholders != 'undefined'){
+            Placeholders.enable();
+        }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script>		</div><!-- /.shell -->
+    </section><!-- /.section section-signup -->
+
+    <footer class="footer">
+        <div class="shell">
+            <div class="copyright">
+                <p>&copy; 2019 Dictionary.com, LLC.</p>
+            </div><!-- /.copyright -->
+
+            <div class="footer__socials">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/dictionarycom" target="_blank">
+                            <img  alt="facebook" data-src="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/temp/footer-facebook.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/temp/footer-facebook.png" alt="facebook" /></noscript>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/dictionarycom" target="_blank">
+                            <img  alt="twitter" data-src="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/temp/footer-twitter.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/temp/footer-twitter.png" alt="twitter" /></noscript>
+                        </a>
+                    </li>
+                </ul>
+
+            </div><!-- /.footer__socials -->
+
+            <div class="nav-footer">
+                <ul id="menu-footer-menu" class="menu"><li id="menu-item-21158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21158"><a href="/e/about/" data-linkid="gy27eg ">About &amp; Contact</a></li>
+                    <li id="menu-item-21159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21159"><a href="/e/terms/" data-linkid="gy27eg ">Cookies, Terms, &amp; Privacy</a></li>
+                </ul>			</div><!-- /.nav-footer -->
+        </div><!-- /.shell -->
+    </footer><!-- /.footer -->
+</div><!-- /.wrapper -->
+
+
+<!-- START Parse.ly Include: Standard -->
+<script data-cfasync="false">
+
+    function uuidProfileCall() {
+        var rootUrl = 'https://api.parsely.com/v2/profile?apikey=dictionary.com';
+        var uuid = '&uuid=' + PARSELY.config.parsely_site_uuid;
+        var requestUrl = rootUrl + uuid + '&url=' + window.location.href;
+        jQuery.ajax({
+            url: requestUrl,
+            dataType: "jsonp"
+        });
+    }
+
+    if (typeof PARSELY == 'object') {
+        var oldonload = PARSELY.onload;
+        if (typeof PARSELY.onload != 'function') {
+            PARSELY.onload = uuidProfileCall
+        }
+        else {
+            PARSELY.onload = function () {
+                if (oldonload) {
+                    oldonload();
+                }
+                uuidProfileCall();
+            };
+        }
+    }
+
+    else {
+        PARSELY = {
+            onload: uuidProfileCall
+        }
+    }
+</script>
+
+<script data-cfasync="false" id="parsely-cfg" data-parsely-site="dictionary.com" src="//cdn.parsely.com/keys/dictionary.com/p.js"></script>
+
+<!-- END Parse.ly Include: Standard -->
+<script>
+    window.crbReloadAds = false;
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [],
+        googletagCanAutoReload = 0;
+
+    var slotConfigs = {
+        desktop: [],
+        tablet: [],
+        mobile: []
+    };
+    var slotDefines = {};
+    slotDefines.slots = [];
+
+    var getCurrentDevice = function() {
+        var window_width = jQuery(window).width();
+
+        if ( window_width > 1024 ) {
+            return 'desktop';
+        }
+
+        if ( window_width > 767 ) {
+            return 'tablet';
+        }
+
+        return 'mobile';
+    }
+
+    var initDesktopConfig = function() {
+        var slotConfigs = [];
+
+        slotConfigs.push({
+            slotID: 'crb-ad-slot-top',
+            sizes: [[728, 90],[970, 90],[970, 250]],
+            adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD',
+            targeting: [['pos', ['top']],['pos2', ['1']]]
+        });
+
+        slotConfigs.push({
+            slotID: 'crb-ad-slot-middle',
+            sizes: [[300, 250]],
+            adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD',
+            targeting: [['pos', ['top']],['pos2', ['2']]]
+        });
+
+        slotConfigs.push({
+            slotID: 'crb-ad-slot-bottom',
+            sizes: [[728, 90],[300, 250]],
+            adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD',
+            targeting: [['pos', ['bot']],['pos2', ['300x250_1']]]
+        });
+        window.slotConfigs['desktop'] = slotConfigs;
+    };
+
+    var initTabletConfig = function() {
+        var slotConfigs = [];
+
+        slotConfigs.push({
+            slotID: 'crb-ad-slot-top',
+            sizes: [[728, 90]],
+            adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD',
+            targeting: [['pos', ['top']],['pos2', ['1']]]
+        });
+
+        slotConfigs.push({
+            slotID: 'crb-ad-slot-middle',
+            sizes: [[300, 250]],
+            adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD',
+            targeting: [['pos', ['top']],['pos2', ['2']]]
+        });
+
+        slotConfigs.push({
+            slotID: 'crb-ad-slot-bottom',
+            sizes: [[300, 250]],
+            adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD',
+            targeting: [['pos', ['bot']],['pos2', ['3']]]
+        });
+        window.slotConfigs['tablet'] = slotConfigs;
+    };
+
+    var initMobileConfig = function() {
+        var slotConfigs = [];
+
+        slotConfigs.push({
+            slotID: 'crb-ad-slot-top',
+            sizes: [[320, 50]],
+            adUnitPath: '/23219321/iac.dict.dictry.mw/editorial_home/category/WOTD',
+            targeting: [['pos', ['top']],['pos2', ['320x50_1']]]
+        });
+
+        slotConfigs.push({
+            slotID: 'crb-ad-slot-middle',
+            sizes: [[300, 250]],
+            adUnitPath: '/23219321/iac.dict.dictry.mw/editorial_home/category/WOTD',
+            targeting: [['pos', ['top']],['pos2', ['320x50_1']]]
+        });
+
+        slotConfigs.push({
+            slotID: 'crb-ad-slot-bottom',
+            sizes: [[300, 250]],
+            adUnitPath: '/23219321/iac.dict.dictry.mw/editorial_home/category/WOTD',
+            targeting: [['pos', ['bot']],['pos2', ['300x250_1']]]
+        });
+        window.slotConfigs['mobile'] = slotConfigs;
+    };
+
+    initDesktopConfig();
+    initTabletConfig();
+    initMobileConfig();
+
+
+    var isEU = 0;
+
+    /* setup onetrust consent wrapper */
+    if (isEU) {
+        function OptanonWrapper() { }
+    }
+
+    /* Personalize or Depersonalize Ads and Refresh */
+    var setGPTPersonalization = function(personalized) {
+        googletag.cmd.push(function() {
+            if (personalized === true || personalized === false) {
+                if (personalized) {
+                    googletag.pubads().setRequestNonPersonalizedAds(0);
+                }
+                else {
+                    googletag.pubads().setRequestNonPersonalizedAds(1);
+                }
+            } else {
+                googletag.pubads().setRequestNonPersonalizedAds(1);
+            }
+            googletag.pubads().refresh();
+        });
+    };
+
+
+    /**------A9 Integration-----------*/
+    ! function(a9, a, p, s, t, A, g) {
+        if (a[a9]) return;
+
+        function q(c, r) {
+            a[a9]._Q.push([c, r])
+        }
+        a[a9] = {
+            init: function() {
+                q("i", arguments)
+            },
+            fetchBids: function() {
+                q("f", arguments)
+            },
+            setDisplayBids: function() {},
+            _Q: []
+        };
+        A = p.createElement(s);
+        A.async = !0;
+        A.src = t;
+        g = p.getElementsByTagName(s)[0];
+        g.parentNode.insertBefore(A, g)
+    }("apstag", window, document, "script", "https://c.amazon-adsystem.com/aax2/apstag.js");
+    apstag.init({
+        pubID: '3067',
+        adServer: 'googletag',
+        bidTimeout: 1000
+    });
+
+    (function(){
+        var implementationDisabled = true;
+        if (implementationDisabled) {
+            return;
+        }
+
+        var dcomAdImplementation = function() {
+            var initializeDesktop = function() {
+                slotDefines.slots['crb-ad-slot-top'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD', [[728, 90], [970, 90], [970, 250]], 'crb-ad-slot-top').setTargeting('pos', ['top']).setTargeting('pos2', ['1']).addService(googletag.pubads());
+                slotDefines.slots['crb-ad-slot-middle'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD', [[300, 250]], 'crb-ad-slot-middle').setTargeting('pos', ['top']).setTargeting('pos2', ['2']).addService(googletag.pubads());
+                slotDefines.slots['crb-ad-slot-bottom'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD',  [[728, 90], [300, 250]], 'crb-ad-slot-bottom').setTargeting('pos', ['bot']).setTargeting('pos2', ['300x250_1']).addService(googletag.pubads());
+            }
+
+            var initializeTablet = function() {
+                slotDefines.slots['crb-ad-slot-top'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD', [[728, 90]], 'crb-ad-slot-top').setTargeting('pos', ['top']).setTargeting('pos2', ['1']).addService(googletag.pubads());
+                slotDefines.slots['crb-ad-slot-middle'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD', [300, 250], 'crb-ad-slot-middle').setTargeting('pos', ['top']).setTargeting('pos2', ['2']).addService(googletag.pubads());
+                slotDefines.slots['crb-ad-slot-bottom'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/category/WOTD', [300, 250], 'crb-ad-slot-bottom').setTargeting('pos', ['bot']).setTargeting('pos2', ['3']).addService(googletag.pubads());
+            }
+
+            var initializeMobile = function() {
+                slotDefines.slots['crb-ad-slot-top'] = googletag.defineSlot('/23219321/iac.dict.dictry.mw/editorial_home/category/WOTD', [320, 50], 'crb-ad-slot-top').setTargeting('pos', ['top']).setTargeting('pos2', ['320x50_1']).addService(googletag.pubads());
+                slotDefines.slots['crb-ad-slot-middle'] = googletag.defineSlot('/23219321/iac.dict.dictry.mw/editorial_home/category/WOTD', [300, 250], 'crb-ad-slot-middle').setTargeting('pos', ['top']).setTargeting('pos2', ['320x50_1']).addService(googletag.pubads());
+                slotDefines.slots['crb-ad-slot-bottom'] = googletag.defineSlot('/23219321/iac.dict.dictry.mw/editorial_home/category/WOTD', [300, 250], 'crb-ad-slot-bottom').setTargeting('pos', ['bot']).setTargeting('pos2', ['300x250_1']).addService(googletag.pubads());
+            }
+
+            var getSlots = function() {
+                if (!slotDefines || !slotDefines.slots) {
+                    return [];
+                }
+
+                var keys = Object.keys(slotDefines.slots);
+                var result = [];
+                for (var i = 0; i < keys.length; i++) {
+                    result.push(slotDefines.slots[keys[i]]);
+                }
+                return result;
+            };
+
+            var destroySlots = function() {
+                var slots = getSlots();
+                if (!slots || !slots.length) {
+                    return;
+                }
+                googletag.destroySlots(slots);
+            }
+
+            var refreshSlots = function() {
+                googletag.pubads().refresh();
+            }
+
+            var enableService = function() {
+                googletag.pubads().enableSingleRequest();
+                googletag.pubads().setTargeting('ptype', ['editorial']);
+                googletag.pubads().disableInitialLoad();
+                googletag.enableServices();
+            }
+
+            var current_size = false;
+
+
+            var switchADs = function( force ) {
+                var force = typeof force === "undefined" ? false : Boolean(force);
+
+                var initialized = Boolean(current_size);
+                if ( ! current_size || force === true ) {
+                    current_size = getCurrentDevice();
+                } else if ( current_size !== getCurrentDevice() ) {
+                    current_size = getCurrentDevice();
+                } else {
+                    return;
+                }
+
+                if ( initialized ) {
+                    destroySlots();
+                }
+
+                switch( current_size ) {
+                    case 'mobile':
+                        initializeMobile();
+                        break;
+
+                    case 'tablet':
+                        initializeTablet();
+                        break;
+
+                    default:
+                        initializeDesktop();
+                }
+
+                enableService();
+
+                if ( initialized ) {
+                    refreshSlots();
+                }
+            }
+
+            // enable ads
+            switchADs();
+
+            var initRefreshListener = function() {
+                // checks if a reload ads has been triggered and actually switches the ads
+                // it's triggered when the slideshow changes slides
+                setInterval(function() {
+                    if ( ! window.crbReloadAds ) {
+                        return;
+                    }
+
+                    window.crbReloadAds = false;
+                    switchADs( true );
+                }, 300);
+            };
+
+
+            var interval = false;
+            var adsIntervalFn = function() {
+                switchADs( true );
+            }
+            var adsIntervalReset = function() {
+                if ( ! googletagCanAutoReload ) {
+                    return;
+                }
+
+                clearInterval(interval);
+                interval = setInterval(
+                    adsIntervalFn,
+                    20 * 1000
+                );
+            }
+            adsIntervalReset();
+
+            if ( ! googletagCanAutoReload ) {
+                initRefreshListener();
+            }
+
+            var timeout = false;
+            jQuery(window).resize(function() {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    adsIntervalReset();
+                    switchADs();
+                }, 500);
+            });
+        };
+
+        googletag.cmd.push(dcomAdImplementation);
+
+        googletag.cmd.push(function() {
+            googletag.display('crb-ad-slot-top');
+            googletag.display('crb-ad-slot-middle');
+            googletag.display('crb-ad-slot-aside');
+            googletag.display('crb-ad-slot-bottom');
+        });
+    })();
+
+
+    googletag.cmd.push(function() {
+        apstag.fetchBids({
+            slots: slotConfigs[getCurrentDevice()]
+        }, function(bids) {
+            /*Callback method that triggers the first DFP request for googletag's
+            disableInitialLoad integration after bids have been set*/
+
+            apstag.setDisplayBids();
+            window.OWT.notifyExternalBiddingComplete();
+
+            /*
+              Determine IAB consent if necessary, and trigger GPT ad refresh
+              if consent is provided.
+            */
+            if(isEU) {
+                try {
+                    if (typeof __cmp === 'function') {
+                        __cmp("getVendorConsents", {}, function(c) {
+                            var consent = false;
+                            if (typeof c.purposeConsents === 'array') {
+                                consent = c.purposeConsents.includes('3:true');
+                            } else if (typeof c.purposeConsents === 'object') {
+                                consent = c.purposeConsents[3];
+                            }
+                            setGPTPersonalization(consent);
+                        });
+                    } else {
+                        setGPTPersonalization(false);
+                    }
+                } catch (error) {
+                    console.error('personalization: ', error)
+                    setGPTPersonalization(false);
+                }
+            } else {
+                setGPTPersonalization(true);
+            }
+
+            googletag.pubads().refresh();
+        });
+    });
+
+    googletag.cmd.push(function() {
+        if(!window.googletag || !googletag.pubadsReady) {
+            return;
+        }
+
+        var repositionPlayers = function() {
+            console.log('Repositioning video players after ad slot loaded');
+            window.crb_video_float_and_park.repositionPlayers();
+        };
+
+        googletag.pubads().addEventListener('slotOnload', function(event) {
+            if(window.crb_video_float_and_park && window.crb_video_float_and_park.repositionPlayers) {
+                repositionPlayers();
+                return;
+            }
+
+            var $body = document.querySelector('body');
+            var handler = function() {
+                repositionPlayers();
+                $body.removeEventListener('crb_float_and_park_ready', handler);
+            };
+            $body.addEventListener('crb_float_and_park_ready', handler);
+        });
+    });
+</script>
+<script type="text/template" id="crb-wotd-nav-template">
+    <%
+    var renderItem = function(item, className) {
+    var classes = [ className ];
+    if (item.getTitle().length > 8) {
+    classes.push('small');
+    }
+
+    var style = "border-color: " + item.getColor();
+    %>
+    <a
+            href="<%= item.getUrl() %>"
+            data-name="<%= item.getName() %>"
+            class="<%= classes.join(' ') %>"
+            style="<%= style %>"
+    >
+        <span><%= item.getDate() %></span>
+        <%= item.getTitle() %>
+    </a>
+    <%
+    };
+
+    if (nextItem) {
+    renderItem(nextItem, 'wotd-widget__nav__next');
+    }
+
+    if (prevItem) {
+    renderItem(prevItem, 'wotd-widget__nav__prev');
+    }
+    %>
+</script><link rel='stylesheet' id='gforms_reset_css-css'  href='https://www.dictionary.com/e/wp-content/plugins/gravityforms/css/formreset.min.css?ver=2.4.15' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css'  href='https://www.dictionary.com/e/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=2.4.15' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css'  href='https://www.dictionary.com/e/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=2.4.15' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css'  href='https://www.dictionary.com/e/wp-content/plugins/gravityforms/css/browsers.min.css?ver=2.4.15' type='text/css' media='all' />
+<script type='text/javascript'>
+    window.lazySizesConfig = window.lazySizesConfig || {};
+
+    window.lazySizesConfig.lazyClass    = 'lazyload';
+    window.lazySizesConfig.loadingClass = 'lazyloading';
+    window.lazySizesConfig.loadedClass  = 'lazyloaded';
+
+    lazySizesConfig.loadMode = 1;
+</script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/plugins/wp-smush-pro/app/assets/js/smush-lazy-load.min.js?ver=3.2.4'></script>
+<script type='text/javascript'>
+    lazySizes.init();
+</script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var _wpUtilSettings = {"ajax":{"url":"\/e\/wp-admin\/admin-ajax.php"}};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/wp-util.min.js?ver=5.2.4'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/js/parsely/override.js?ver=1.1.0'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/wp-embed.min.js?ver=5.2.4'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.4.15'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/www.dictionary.com\/e\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.dictionary.com\/e\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};
+    var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/www.dictionary.com\/e\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.dictionary.com\/e\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};
+    var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/www.dictionary.com\/e\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.dictionary.com\/e\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.4.15'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.4.15'></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"393deec9cb","applicationID":"330714021","transactionName":"bwRQYUJRC0tSUhFcCVZOc1ZEWQpWHFAXVg5RF1cYU0IHZ0ReEVE=","queueTime":0,"applicationTime":1191,"atts":"Q0NTFwpLGEU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using memcached (Requested URI is rejected)
+
+Page cache debug info:
+Engine:             memcached
+Cache key:
+Creation Time:      1574957443.000s
+Header info:
+Content-Type:        text/html; charset=UTF-8
+Cache-Control:       max-age=3600
+
+Minified using disk
+
+Served from: www.dictionary.com @ 2019-11-28 08:10:43 by W3 Total Cache
+-->

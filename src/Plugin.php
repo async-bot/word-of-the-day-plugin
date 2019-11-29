@@ -4,9 +4,10 @@ namespace AsyncBot\Plugin\WordOfTheDay;
 
 use Amp\Promise;
 use AsyncBot\Core\Http\Client;
+use AsyncBot\Plugin\WordOfTheDay\Exception\WordOfTheDayNotFound;
 use AsyncBot\Plugin\WordOfTheDay\Retriever\GetFromDictionaryDotCom;
 use AsyncBot\Plugin\WordOfTheDay\Retriever\GetFromMerriamWebster;
-use AsyncBot\Plugin\WordOfTheDay\ValueObject\Result\Wotd;
+use AsyncBot\Plugin\WordOfTheDay\ValueObject\Result\WordOfTheDay;
 
 final class Plugin
 {
@@ -17,20 +18,18 @@ final class Plugin
         $this->httpClient = $httpClient;
     }
 
-
     /**
-     * @return Promise<Wotd>
-     * @throws Exception\WotdNotFound
+     * @return Promise<WordOfTheDay>
+     * @throws WordOfTheDayNotFound
      */
     public function getFromDictionaryDotCom(): Promise
     {
         return (new GetFromDictionaryDotCom($this->httpClient))->retrieve();
     }
 
-
     /**
-     * @return Promise<Wotd>
-     * @throws Exception\WotdNotFound
+     * @return Promise<WordOfTheDay>
+     * @throws WordOfTheDayNotFound
      */
     public function getFromMerriamWebster(): Promise
     {
